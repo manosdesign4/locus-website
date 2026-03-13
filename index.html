@@ -40,16 +40,13 @@
 
     /* ── SHARED ── */
     section{padding:60px 48px}
-    /* Sections adjacent to separators: separator owns the gap */
-    .sep + section{padding-top:20px}
-    section + .sep{margin-top:-40px}
     .sl{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
     .sh{font-family:var(--serif);font-size:clamp(28px,4.2vw,52px);line-height:1.15;color:var(--charcoal);max-width:760px;margin-bottom:24px}
     .sb{font-size:17px;line-height:1.75;color:var(--txt-l);max-width:620px}
     .sb p+p{margin-top:16px}
 
     /* ── SEPARATORS ── */
-    .sep{text-align:center;padding:40px 48px;opacity:.15}
+    .sep{text-align:center;padding:10px 48px;margin:-30px 0;opacity:.15;position:relative;z-index:1}
     .sep img{height:112px;width:auto;display:block;margin:0 auto}
     .sep.light{opacity:.08}
     .sep.light img{filter:brightness(0) invert(1)}
@@ -184,10 +181,8 @@
       .hero-sub{font-size:16px;max-width:100%}
       .sh{font-size:clamp(24px,6vw,36px)}
       .sb{font-size:15px}
-      .sep{padding:24px 20px}
+      .sep{padding:6px 20px;margin:-20px 0}
       .sep img{height:72px}
-      .sep + section{padding-top:12px}
-      section + .sep{margin-top:-24px}
       .sg{grid-template-columns:1fr}
       .sc-img{aspect-ratio:4/3}
       .ab-grid{grid-template-columns:1fr;gap:32px}
@@ -210,10 +205,8 @@
       .hero-h{font-size:clamp(28px,9vw,40px)}
       .fp{grid-template-columns:1fr}
       section{padding:32px 16px}
-      .sep{padding:16px 16px}
+      .sep{padding:4px 16px;margin:-16px 0}
       .sep img{height:56px}
-      .sep + section{padding-top:8px}
-      section + .sep{margin-top:-16px}
     }
 
     /* ── FADE-IN ── */
