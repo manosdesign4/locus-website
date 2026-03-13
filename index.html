@@ -45,11 +45,12 @@
     .sep.light{opacity:.08}
     .sep.light img{filter:brightness(0) invert(1)}
     .isep{text-align:center;padding:16px 48px}
-    .isep img{height:120px;width:auto;opacity:.08;filter:grayscale(100%) brightness(.3)}
+    .isep img{height:120px;width:auto;opacity:.06}
 
     /* HERO */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 48px;position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('hero.jpg');background-size:cover;background-position:center}
+    .hero-bg{position:absolute;inset:0;overflow:hidden}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
     .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,18,24,.82) 0%,rgba(10,18,24,.55) 45%,rgba(10,18,24,.75) 100%)}
     .hero-c{position:relative;z-index:2;max-width:760px}
     .hero-c .sl{color:var(--sky)}
@@ -200,7 +201,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg"><img src="hero.JPG" alt=""></div>
   <div class="hero-c">
     <p class="sl">Design-led strategy consultancy</p>
     <h1 class="hero-h">Clarity before <em>action.</em></h1>
@@ -300,7 +301,7 @@
       <p class="pbio">Design strategist with a PhD in design-led innovation from Northumbria University. Background in industrial product design (BA, MA). Expertise in design thinking, strategic design, co-creation, and visual tools for mapping complexity. Nine peer-reviewed publications on innovation processes, creative tensions, and value framing. Based in Chania, Crete.</p>
     </div>
     <div>
-      <div class="person-photo"><img src="neil.jpg" alt="Neil Smith"></div>
+      <div class="person-photo"><img src="neil.jpeg" alt="Neil Smith"></div>
       <h3 class="pname">Neil Smith</h3>
       <p class="prole">Co-founder &#38; Director</p>
       <p class="pbio">Design-led innovation practitioner with extensive experience in organisational behaviour, co-creation facilitation, and building innovation capabilities. Specialist in understanding what blocks or enables creative work &#8212; and designing the conditions for it to thrive. Based in the UK.</p>
@@ -332,7 +333,7 @@
     <div class="co-info">
       <p>If something here resonated &#8212; or if you have a challenge that needs clarity and action &#8212; reach out. The first step is always a conversation.</p>
       <div class="co-det">
-        <div><span>Email</span><p><a href="mailto:locusforinnovation&#64;gmail.com">locusforinnovation&#64;gmail.com</a></p></div>
+        <div><span>Email</span><p><a href="/cdn-cgi/l/email-protection#670b080412140108150e0909081106130e0809414451535c000a060e0b4904080a">locusforinnovation&#64;gmail.com</a></p></div>
         <div><span>WhatsApp</span><p><a href="https://wa.me/306944800352">+30 6944 800 352</a></p></div>
         <div><span>Location</span><p>Chania, Crete &#183; United Kingdom</p></div>
       </div>
@@ -352,11 +353,11 @@
   <div class="ft-links">
     <a href="https://www.instagram.com/locusforinnovation/" target="_blank">Instagram</a>
     <a href="https://www.linkedin.com/company/locus-design-innovation/" target="_blank">LinkedIn</a>
-    <a href="mailto:locusforinnovation&#64;gmail.com">Email</a>
+    <a href="/cdn-cgi/l/email-protection#d7bbb8b4a2a4b1b8a5beb9b9b8a1b6a3beb8b9f1f4e1e3ecb0bab6bebbf9b4b8ba">Email</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll behaviour
   var nav = document.getElementById('mainNav');
   window.addEventListener('scroll', function() {
@@ -367,11 +368,4 @@
   var items = document.querySelectorAll('.fi');
   for (var i = 0; i < items.length; i++) { items[i].classList.add('animate'); }
   var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) { entry.target.classList.add('vis'); }
-    });
-  }, { threshold: 0.08 });
-  for (var j = 0; j < items.length; j++) { observer.observe(items[j]); }
-</script>
-</body>
-</html>
+    entries.forEach(funct
