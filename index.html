@@ -16,7 +16,7 @@
     html{scroll-behavior:smooth;overflow-x:hidden}
     body{font-family:var(--sans);color:var(--txt);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-    /* ── NAV ── */
+    /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;background:rgba(0,0,0,.2);backdrop-filter:blur(14px);transition:.4s}
     .nav.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04)}
     .nav-left{display:flex;align-items:center}
@@ -38,20 +38,20 @@
     .nav.scrolled .nav-mob{color:var(--charcoal)}
     .nav-mm{display:none}
 
-    /* ── SHARED ── */
+    /* SHARED */
     section{padding:80px 48px}
     .sl{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
     .sh{font-family:var(--serif);font-size:clamp(28px,4.2vw,52px);line-height:1.15;color:var(--charcoal);max-width:760px;margin-bottom:24px}
     .sb{font-size:17px;line-height:1.75;color:var(--txt-l);max-width:620px}
     .sb p+p{margin-top:16px}
 
-    /* ── SEPARATORS ── */
+    /* SEPARATORS */
     .sep{text-align:center;padding:20px 48px;opacity:.15}
     .sep img{height:112px;width:auto;display:block;margin:0 auto}
     .sep.light{opacity:.08}
     .sep.light img{filter:brightness(0) invert(1)}
 
-    /* ── HERO ── */
+    /* HERO */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 48px;position:relative;overflow:hidden}
     .hero-bg{position:absolute;inset:0;overflow:hidden}
     .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
@@ -64,12 +64,12 @@
     .hero-scroll{position:absolute;bottom:32px;left:48px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);z-index:2;animation:pulse 2.5s ease-in-out infinite}
     @keyframes pulse{0%,100%{opacity:.15}50%{opacity:.45}}
 
-    /* ── PROBLEM ── */
-    .problem{background:var(--white)}
+    /* PROBLEM - reduced top padding since no separator above */
+    .problem{background:var(--white);padding-top:60px}
     .cg-text{color:var(--sky);font-weight:600}
     .sh-blue{color:var(--sky)}
 
-    /* ── PROCESS ── */
+    /* PROCESS */
     .process{background:var(--light)}
     .funnel-img{margin:40px 0 28px;max-width:820px}
     .funnel-img img{width:100%;height:auto;border-radius:6px}
@@ -77,20 +77,26 @@
     .pn{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
     .pn.w{color:#E8735A}.pn.m{color:#D4845A}.pn.c{color:#4EA8C4}.pn.b{color:var(--sky)}
     .fp p{font-size:14px;line-height:1.6;color:var(--txt-l)}
+    .enablers{margin-top:40px;max-width:820px}
+    .enablers h3{font-family:var(--serif);font-size:22px;color:var(--charcoal);margin-bottom:16px}
+    .enablers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .enabler{padding:16px;background:var(--white);border-radius:4px}
+    .enabler strong{display:block;font-size:13px;color:var(--charcoal);margin-bottom:4px;letter-spacing:.3px}
+    .enabler span{font-size:12.5px;color:var(--txt-l);line-height:1.5}
 
-    /* ── SERVICES ── */
+    /* SERVICES */
     .services{background:var(--white)}
     .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0;margin-top:40px;max-width:1100px}
     .sc{padding:0;transition:.3s;cursor:default;overflow:hidden;border:1px solid var(--mid);margin:-0.5px}
-    .sc-img{width:100%;aspect-ratio:1;overflow:hidden}
-    .sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .sc-img{width:100%;overflow:hidden}
+    .sc-img img{width:100%;height:auto;display:block;transition:transform .5s ease}
     .sc:hover .sc-img img{transform:scale(1.03)}
     .sc-content{padding:28px 24px;background:var(--white)}
     .sn{font-family:var(--serif);font-size:20px;color:var(--charcoal);margin-bottom:5px}
     .st{font-size:13px;font-style:italic;color:var(--sky);margin-bottom:12px}
     .sd{font-size:13.5px;line-height:1.6;color:var(--txt-l)}
 
-    /* ── CHALLENGES ── */
+    /* CHALLENGES */
     .challenges{background:var(--light)}
     .cg-grid{margin-top:40px;max-width:840px}
     .ch{padding:32px 0;border-bottom:1px solid rgba(0,0,0,.06)}
@@ -102,7 +108,7 @@
     .ch-det h4{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--charcoal);margin-bottom:6px}
     .ch-det p{font-size:13.5px;color:var(--txt-l);line-height:1.6}
 
-    /* ── DIAGNOSTIC ── */
+    /* DIAGNOSTIC */
     .diag{background:var(--charcoal);color:var(--white);text-align:center;padding:72px 48px}
     .diag .sl{color:rgba(255,255,255,.3)}
     .diag .sh{color:var(--white);margin:0 auto 20px}
@@ -110,7 +116,7 @@
     .btn{display:inline-block;padding:15px 44px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:.3s}
     .btn:hover{background:#1E92BD;transform:translateY(-1px)}
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     .about{background:var(--white)}
     .ab-intro{margin-bottom:40px}
     .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:920px}
@@ -123,7 +129,7 @@
     .net h3{font-family:var(--serif);font-size:21px;color:var(--charcoal);margin-bottom:12px}
     .net p{font-size:15px;line-height:1.7;color:var(--txt-l)}
 
-    /* ── THINKING ── */
+    /* THINKING */
     .thinking{background:var(--light)}
     .tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:28px;margin-top:40px;max-width:940px}
     .tc{background:var(--white);padding:32px 24px;border-radius:4px;transition:.3s}
@@ -134,7 +140,7 @@
     .tl{font-size:12.5px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:.5px}
     .tl:hover{text-decoration:underline}
 
-    /* ── CONTACT ── */
+    /* CONTACT */
     .contact{background:var(--charcoal);color:var(--white)}
     .contact .sl{color:rgba(255,255,255,.3)}
     .contact .sh{color:var(--white)}
@@ -152,19 +158,19 @@
     .btn-c{display:inline-block;margin-top:18px;padding:13px 32px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:.3s}
     .btn-c:hover{background:#1E92BD}
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     .ft{background:#1a1a1a;color:rgba(255,255,255,.28);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
     .ft-links{display:flex;gap:24px}
     .ft-links a{color:rgba(255,255,255,.28);text-decoration:none;font-size:12px;transition:.2s}
     .ft-links a:hover{color:var(--sky)}
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media(max-width:1024px){
       .nav{padding:12px 32px}
       .nav-links{gap:20px}
       .nav-links a{font-size:11px}
-      section{padding:48px 32px}
-      .sg{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+      section{padding:64px 32px}
+      .enablers-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:768px){
       .nav{padding:10px 20px}
@@ -179,17 +185,17 @@
       .hero{padding:0 20px;min-height:85vh}
       .hero-h{font-size:clamp(32px,8vw,48px)}
       .hero-sub{font-size:16px;max-width:100%}
-      .sh{font-size:clamp(24px,6vw,36px)}
-      .sb{font-size:15px}
+      .sh{font-size:clamp(24px,6vw,36px);max-width:100%}
+      .sb{font-size:15px;max-width:100%}
       .sep{padding:12px 20px}
       .sep img{height:72px}
       .sg{grid-template-columns:1fr}
-      .sc-img{aspect-ratio:4/3}
       .ab-grid{grid-template-columns:1fr;gap:32px}
       .co-grid{grid-template-columns:1fr;gap:36px}
       .ch-det{grid-template-columns:1fr}
       .fp{grid-template-columns:1fr 1fr;gap:16px}
       .fp p{font-size:13px}
+      .enablers-grid{grid-template-columns:1fr}
       .tg{grid-template-columns:1fr}
       .ft{flex-direction:column;gap:12px;text-align:center;padding:24px 20px}
       .hero-scroll{display:none}
@@ -197,8 +203,6 @@
       .funnel-img img{max-width:100%}
       .diag{padding:56px 20px}
       [style*="white-space"]{white-space:normal !important}
-      .sh{max-width:100%}
-      .sb{max-width:100%}
     }
     @media(max-width:480px){
       .nav-logo img{height:32px}
@@ -209,7 +213,7 @@
       .sep img{height:56px}
     }
 
-    /* ── FADE-IN ── */
+    /* FADE-IN */
     .fi.animate{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
     .fi.animate.vis{opacity:1;transform:translateY(0)}
   </style>
@@ -228,12 +232,12 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#process">How We Work</a>
-      <a href="#thinking">Thinking</a>
+      <a href="#thinking">Our Thinking</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="lang-switch">
       <a href="#" class="active" title="English">EN</a>
-      <a href="#" title="&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;">GR</a>
+      <a href="#" title="Ellinika">GR</a>
     </div>
     <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
   </div>
@@ -241,7 +245,7 @@
     <a href="#about" onclick="this.parentElement.classList.remove('active')">About</a>
     <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
     <a href="#process" onclick="this.parentElement.classList.remove('active')">How We Work</a>
-    <a href="#thinking" onclick="this.parentElement.classList.remove('active')">Thinking</a>
+    <a href="#thinking" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
     <a href="#contact" onclick="this.parentElement.classList.remove('active')">Contact</a>
   </div>
 </nav>
@@ -257,14 +261,14 @@
   <span class="hero-scroll">Scroll &#8595;</span>
 </section>
 
-<div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
+<!-- NO separator between hero and problem - direct transition -->
 
 <!-- PROBLEM -->
 <section class="problem fi">
   <p class="sl">The challenge</p>
-  <h2 class="sh">Most businesses don&#8217;t lack effort.<br><span class="sh-blue">They lack clarity.</span></h2>
+  <h2 class="sh" style="white-space:nowrap">Most businesses don&#8217;t lack effort. <span class="sh-blue">They lack clarity.</span></h2>
   <div class="sb">
-    <p>They run but don&#8217;t grow. They&#8217;re busy but not effective. Ideas stay on paper. Goals exist but aren&#8217;t understood by the team. Decisions get made reactively, not strategically.</p>
+    <p>You run but you don&#8217;t grow. You are busy but not effective. Your ideas stay on paper. Your goals exist but aren&#8217;t understood by the team. Decisions get made reactively, not strategically. Sounds familiar?</p>
     <p>The common thread isn&#8217;t a lack of resources, talent, or ambition. It&#8217;s the absence of strategic clarity &#8212; the gap between what a business intends and what it actually achieves.</p>
     <p>We call this <span class="cg-text">The Clarity Gap</span>. Locus exists to close it &#8212; not just by naming it, but through design-led sensemaking, strategy, and the creation of real solutions.</p>
   </div>
@@ -275,10 +279,11 @@
 <!-- HOW WE WORK -->
 <section class="process fi" id="process">
   <p class="sl">Our approach</p>
-  <h2 class="sh">From understanding to action. We design the whole journey.</h2>
+  <h2 class="sh">From framing to action. We <span class="sh-blue">design</span> the whole journey.</h2>
   <div class="sb">
-    <p>Every engagement follows a structured design process &#8212; from broad exploration to focused delivery. We invest disproportionate energy in the early stages: understanding the situation, surfacing assumptions, and framing the right question. Research shows this front-loading produces dramatically better outcomes.</p>
+    <p>Our process adapts the Design Council UK&#8217;s Double Diamond into what we call the Design Funnel &#8212; a model that reflects how design-led strategic work actually unfolds. We invest disproportionate energy in the early stages: understanding the situation, surfacing assumptions, and framing the right question. Research shows this front-loading produces dramatically better outcomes.</p>
     <p>But clarity is just the beginning. We design and develop actual solutions: new products, services, experiences, business models, and communication systems &#8212; either through our own practice or by activating our extended network of specialist collaborators.</p>
+    <p>Central to how we work is a co-creation mindset. We don&#8217;t deliver solutions from the outside &#8212; we build them with you. Every engagement is structured around six enabling conditions that make collaborative thinking productive.</p>
   </div>
   <div class="funnel-img">
     <img src="funnel.png" alt="The Locus Design Funnel: Discover, Define, Develop, Deliver">
@@ -288,6 +293,17 @@
     <div><p class="pn m">Define</p><p>Synthesis and framing. Discovery is sharpened into a clear articulation of the core challenge or opportunity.</p></div>
     <div><p class="pn c">Develop</p><p>Generating, prototyping, and testing potential solutions within the constraints established by the framing work.</p></div>
     <div><p class="pn b">Deliver</p><p>Refinement, implementation, and handover of products, services, strategies, and systems ready for the real world.</p></div>
+  </div>
+  <div class="enablers">
+    <h3>The six co-creation enablers</h3>
+    <div class="enablers-grid">
+      <div class="enabler"><strong>Safe Environment</strong><span>Intellectual and psychological safety. Permission to be wrong, to speculate, to voice half-formed ideas.</span></div>
+      <div class="enabler"><strong>Open, Questioning Stance</strong><span>Challenge assumptions through speculation rather than confrontation. &#8220;What if?&#8221; as a generative move.</span></div>
+      <div class="enabler"><strong>Semi-Structured Process</strong><span>Enough structure to create momentum. Enough openness to allow emergence and adaptation.</span></div>
+      <div class="enabler"><strong>Visualisation as Thinking</strong><span>Maps, diagrams, and artefacts used to reason &#8212; not to decorate. Making complexity visible.</span></div>
+      <div class="enabler"><strong>Diverse Perspectives</strong><span>Stakeholders as contributors, not informants. Value comes from the collision of different views.</span></div>
+      <div class="enabler"><strong>Catalytic Facilitation</strong><span>Provoke insight rather than control outcomes. We steer without prescribing.</span></div>
+    </div>
   </div>
 </section>
 
@@ -300,10 +316,10 @@
   <div class="sg">
     <div class="sc"><div class="sc-img"><img src="svc-transform.png" alt="Business Transformation"></div><div class="sc-content"><h3 class="sn">Business Transformation</h3><p class="st">When the business works &#8212; but doesn&#8217;t grow.</p><p class="sd">Competitive landscape mapping, differentiation strategy, business model exploration. For established businesses that need to see their situation from above &#8212; and design a way forward.</p></div></div>
     <div class="sc"><div class="sc-img"><img src="svc-newbiz.png" alt="New Business Models"></div><div class="sc-content"><h3 class="sn">New Business Models</h3><p class="st">When the idea is strong &#8212; but the architecture isn&#8217;t.</p><p class="sd">Business Model Canvas facilitation, value proposition design, strategic planning. For founders who have the vision but need the structure to make it viable and scalable.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-cx.png" alt="Customer Experience"></div><div class="sc-content"><h3 class="sn">Customer Experience</h3><p class="st">When the product is good &#8212; but the experience isn&#8217;t.</p><p class="sd">Service blueprints, customer journeys, touchpoint analysis, experience strategy. For businesses where quality alone isn&#8217;t enough.</p></div></div>
+    <div class="sc"><div class="sc-img"><img src="svc-cx.png" alt="Experience Design"></div><div class="sc-content"><h3 class="sn">Experience Design</h3><p class="st">When the product is good &#8212; but the experience isn&#8217;t.</p><p class="sd">Service blueprints, customer journeys, touchpoint analysis, experience strategy. For businesses where quality alone isn&#8217;t enough &#8212; the whole experience needs designing.</p></div></div>
     <div class="sc"><div class="sc-img"><img src="svc-creative.png" alt="Creative Environments"></div><div class="sc-content"><h3 class="sn">Creative Environments</h3><p class="st">When teams have knowledge &#8212; but can&#8217;t unlock it together.</p><p class="sd">Co-creation workshop design, innovation facilitation, team alignment. For organisations where the right conversations aren&#8217;t happening.</p></div></div>
     <div class="sc"><div class="sc-img"><img src="svc-products.png" alt="New Products"></div><div class="sc-content"><h3 class="sn">New Products &#38; Propositions</h3><p class="st">When there&#8217;s demand &#8212; but no clear offer.</p><p class="sd">Concept development, proposition framing, prototyping, feasibility exploration. From initial idea through to developed solutions ready for market.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-visibility.png" alt="Visibility and Brand Strategy"></div><div class="sc-content"><h3 class="sn">Visibility &#38; Brand Strategy</h3><p class="st">When the work is excellent &#8212; but nobody sees it.</p><p class="sd">Market positioning, brand identity development, storytelling, strategic communication. For businesses competing on price when they should compete on meaning.</p></div></div>
+    <div class="sc"><div class="sc-img"><img src="svc-visibility.png" alt="Strategic Marketing"></div><div class="sc-content"><h3 class="sn">Strategic Marketing</h3><p class="st">When the work is excellent &#8212; but nobody sees it.</p><p class="sd">Market positioning, brand identity development, storytelling, strategic communication. For businesses competing on price when they should compete on meaning.</p></div></div>
   </div>
 </section>
 
@@ -333,6 +349,7 @@
   <a href="https://locus-quiz-en.vercel.app/" target="_blank" class="btn">Take the quiz &#8594;</a>
 </section>
 
+<!-- Walking figure between quiz and about -->
 <div class="sep light"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
 
 <!-- ABOUT -->
@@ -361,7 +378,7 @@
 
 <!-- THINKING -->
 <section class="thinking fi" id="thinking">
-  <p class="sl">Thinking</p>
+  <p class="sl">Our thinking</p>
   <h2 class="sh">Ideas, observations, and questions from our practice.</h2>
   <div class="tg">
     <div class="tc"><p class="tt">Strategy</p><h3 class="th">The Clarity Gap: Why Businesses Run But Don&#8217;t Grow</h3><p class="te">An exploration of the space between intention and achievement &#8212; and why the answer isn&#8217;t more effort, more data, or more tools.</p><a href="#" class="tl">Read &#8594;</a></div>
@@ -380,7 +397,7 @@
     <div class="co-info">
       <p>If something here resonated &#8212; or if you have a challenge that needs clarity and action &#8212; reach out. The first step is always a conversation.</p>
       <div class="co-det">
-        <div><span>Email</span><p><a href="/cdn-cgi/l/email-protection#1b7774786e687d7469727575746d7a6f7274753d382d2f207c767a727735787476">locusforinnovation&#64;gmail.com</a></p></div>
+        <div><span>Email</span><p><a href="mailto:locusforinnovation&#64;gmail.com">locusforinnovation&#64;gmail.com</a></p></div>
         <div><span>WhatsApp</span><p><a href="https://wa.me/306944800352">+30 6944 800 352</a></p></div>
         <div><span>Location</span><p>Chania, Crete &#183; United Kingdom</p></div>
       </div>
@@ -400,11 +417,11 @@
   <div class="ft-links">
     <a href="https://www.instagram.com/locusforinnovation/" target="_blank">Instagram</a>
     <a href="https://www.linkedin.com/company/locus-design-innovation/" target="_blank">LinkedIn</a>
-    <a href="/cdn-cgi/l/email-protection#305c5f534543565f42595e5e5f465144595f5e161306040b575d51595c1e535f5d">Email</a>
+    <a href="mailto:locusforinnovation&#64;gmail.com">Email</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   var nav = document.getElementById('mainNav');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 80) { nav.classList.add('scrolled'); }
@@ -413,4 +430,11 @@
   var items = document.querySelectorAll('.fi');
   for (var i = 0; i < items.length; i++) { items[i].classList.add('animate'); }
   var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(funct
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('vis'); }
+    });
+  }, { threshold: 0.08 });
+  for (var j = 0; j < items.length; j++) { observer.observe(items[j]); }
+</script>
+</body>
+</html>
