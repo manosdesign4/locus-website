@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Front-Loading: Γιατί το Αργό Ξεκίνημα σας Φέρνει Πιο Γρήγορα στον Στόχο — Locus Design + Innovation</title>
+  <meta name="description" content="Η επένδυση δυσανάλογου χρόνου στην κατανόηση του προβλήματος παράγει δραματικά καλύτερα αποτελέσματα από την επίσπευση προς λύσεις. Το σχήμα του χοάνης κωδικοποιεί αυτή την αρχή." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --mid: #5a5a5a;
+      --light: #9a9a9a;
+      --rule: #e0ddd8;
+      --bg: #f7f5f1;
+      --white: #ffffff;
+      --accent: #2e5fa3;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo img { height: 28px; display: block; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-lang {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-lang a { color: var(--light); text-decoration: none; }
+    .nav-lang a.active { color: var(--ink); }
+
+    .article-hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .article-hero h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+
+    .article-lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--mid);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--light);
+      letter-spacing: 0.03em;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .article-meta span::after { content: '·'; margin-left: 1rem; }
+    .article-meta span:last-child::after { content: ''; }
+
+    .article-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #2a2a2a;
+      margin-bottom: 1.6rem;
+    }
+
+    .article-body p:first-child::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 400;
+      float: left;
+      line-height: 0.8;
+      margin: 0.1em 0.1em 0 0;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--ink);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.8rem 0;
+      margin: 2.5rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .funnel-diagram {
+      margin: 2.5rem 0;
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--rule);
+    }
+
+    .funnel-diagram-title {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 1.5rem;
+    }
+
+    .funnel-stages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--rule);
+    }
+
+    .funnel-stage {
+      background: var(--bg);
+      padding: 1rem 0.75rem;
+    }
+
+    .funnel-stage-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 0.4rem;
+    }
+
+    .funnel-stage-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .funnel-stage:nth-child(1) .funnel-stage-name,
+    .funnel-stage:nth-child(2) .funnel-stage-name { color: var(--accent); }
+
+    .funnel-stage-desc {
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: var(--mid);
+    }
+
+    .funnel-emphasis {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.78rem;
+      color: var(--mid);
+      font-style: italic;
+    }
+
+    .article-footer-nav {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: 3rem 2rem;
+    }
+
+    .article-footer-nav-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--ink); }
+
+    .next-articles { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+    .next-article-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-decoration: none;
+      max-width: 220px;
+    }
+
+    .next-article-link .tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    .next-article-link .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--mid);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .next-article-link:hover .title { color: var(--ink); }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.9); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 3rem 1.25rem 2rem; }
+      .article-body { padding: 2rem 1.25rem 4rem; }
+      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
+      .funnel-stages { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index_gr.html" class="nav-logo">
+      <img src="https://locus-website-rho.vercel.app/logo_grey-blue.png" alt="Locus Design + Innovation" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index_gr.html#about">Σχετικά</a></li>
+      <li><a href="/index_gr.html#services">Υπηρεσίες</a></li>
+      <li><a href="/index_gr.html#process">Πώς Δουλεύουμε</a></li>
+      <li><a href="/index_gr.html#thinking">Οι Σκέψεις μας</a></li>
+      <li><a href="/index_gr.html#contact">Επικοινωνία</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="/article-front-loading.html">EN</a>
+      <a href="#" class="active">ΕΛ</a>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Μέθοδος</span>
+    <h1>Front-Loading: Γιατί το <em>Αργό Ξεκίνημα</em> σας Φέρνει Πιο Γρήγορα στον Στόχο</h1>
+    <p class="article-lede">Υπάρχει πίεση, σε κάθε έργο, να ξεκινήσεις αμέσως. Αυτή η πίεση είναι επίσης ένας από τους πιο αξιόπιστους τρόπους για να εγγυηθείς ένα κακό αποτέλεσμα.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>7 λεπτά ανάγνωση</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Υπάρχει πίεση, σε κάθε έργο, να ξεκινήσεις αμέσως. Να δείξεις πρόοδο. Να παράγεις κάτι που αποδεικνύει ότι η δουλειά άρχισε. Είναι κατανοητό — ο χρόνος κοστίζει χρήμα, η ορμή έχει σημασία, και υπάρχει φυσική δυσφορία στο να κάθεσαι με ένα πρόβλημα πριν προσπαθήσεις να το λύσεις.</p>
+
+    <p>Αυτή η πίεση είναι επίσης ένας από τους πιο αξιόπιστους τρόπους για να εγγυηθείς ένα κακό αποτέλεσμα.</p>
+
+    <p>Η αρχή με την οποία δουλεύουμε ονομάζεται front-loading. Σημαίνει επένδυση δυσανάλογου χρόνου, προσοχής και πόρων στην αρχή ενός έργου — στην κατανόηση της κατάστασης πριν επιχειρήσουμε να δράσουμε σε αυτήν. Φαίνεται αντίθετο με τη διαίσθηση. Μπορεί να φαίνεται αργό, ακόμα και χαραφλά, όταν ο πελάτης είναι έτοιμος να κινηθεί και η ομάδα θέλει να χτίσει. Αλλά τα στοιχεία είναι συνεπή: η ποιότητα όλων όσων ακολουθούν καθορίζεται από την ποιότητα αυτής της πρώιμης εργασίας.</p>
+
+    <p>Η λογική είναι απλή. Μια λύση που χτίστηκε πάνω σε ένα ανεπαρκώς κατανοητό πρόβλημα δεν αποτυγχάνει απλώς να το λύσει — συχνά το χειροτερεύει. Έχετε τώρα επενδύσει χρόνο, χρήμα και πολιτικό κεφάλαιο σε μια απάντηση στη λάθος ερώτηση. Η αλλαγή πορείας είναι σημαντικά δυσκολότερη από ό,τι θα ήταν αν ξεκινούσατε πιο προσεκτικά. Το κόστος της εκπρόθεσμης διόρθωσης υπερτερεί κατά πολύ του κόστους της πρώιμης υπομονής.</p>
+
+    <div class="funnel-diagram">
+      <p class="funnel-diagram-title">Η Χοάνη Σχεδιασμού της Locus</p>
+      <div class="funnel-stages">
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">01 — Αρχικό στάδιο</div>
+          <div class="funnel-stage-name">Ανακάλυψη</div>
+          <div class="funnel-stage-desc">Ευρεία εξερεύνηση. Έρευνα, παρατήρηση, συμμετοχή stakeholders. Όλες οι παραδοχές είναι ανοιχτές σε αμφισβήτηση.</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">02 — Αρχικό στάδιο</div>
+          <div class="funnel-stage-name">Ορισμός</div>
+          <div class="funnel-stage-desc">Σύνθεση και πλαισίωση. Η ανακάλυψη αποκρυσταλλώνεται σε σαφή διατύπωση της κεντρικής πρόκλησης ή ευκαιρίας.</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">03</div>
+          <div class="funnel-stage-name">Ανάπτυξη</div>
+          <div class="funnel-stage-desc">Παραγωγή, πρωτοτυποποίηση και δοκιμή πιθανών λύσεων εντός των περιορισμών που έχει θέσει η πλαισιωτική εργασία.</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-stage-label">04</div>
+          <div class="funnel-stage-name">Παράδοση</div>
+          <div class="funnel-stage-desc">Βελτίωση, υλοποίηση και παράδοση προϊόντων, υπηρεσιών και στρατηγικών έτοιμων για τον πραγματικό κόσμο.</div>
+        </div>
+      </div>
+      <p class="funnel-emphasis">Το αρχικό στάδιο — Ανακάλυψη και Ορισμός — είναι εκεί που χτίζεται η αξία. Όλα τα επόμενα μετατρέπουν αυτό που έχει διαθέσιμο το αρχικό στάδιο.</p>
+    </div>
+
+    <div class="pull-quote">
+      «Η ταχύτητα δεν βρίσκεται στην αρχή. Κερδίζεται εκεί.»
+    </div>
+
+    <p>Η πρακτική του σχεδιασμού έχει μια δομική κωδικοποίηση αυτής της αρχής. Η Χοάνη Σχεδιασμού — η προσαρμογή μας του Διπλού Διαμαντιού του Design Council — χαρτογραφεί το σχήμα της καλής διαδικασίας καινοτομίας. Τα πρώιμα στάδια είναι ευρεία: μέγιστη απόκλιση, πλατύτερη εξερεύνηση, η σκόπιμη άρνηση να στενέψεις πολύ νωρίς. Τα μεταγενέστερα στάδια συγκλίνουν προοδευτικά, στενεύοντας προς την υλοποίηση καθώς η κατανόηση συσσωρεύεται και οι επιλογές γίνονται αποφάσεις.</p>
+
+    <p>Αυτό που κάνει ορατή η χοάνη είναι ότι αυτό το σχήμα δεν είναι συμμετρικό. Το αρχικό στάδιο δεν είναι ένα σύντομο προοίμιο πριν αρχίσει η πραγματική δουλειά. Είναι η πραγματική δουλειά. Τα στάδια Ανακάλυψης και Ορισμού είναι εκεί που χτίζεται η αξία. Η μεταγενέστερη εργασία, όσο καλά κι αν εκτελεστεί, μπορεί μόνο να μετατρέψει αυτό που έχει διαθέσιμο το αρχικό στάδιο.</p>
+
+    <p>Στην πράξη, το front-loading μοιάζει με αυτό: δεν αποδεχόμαστε ένα briefing στην ονομαστική του αξία. Όχι επειδή οι πελάτες κάνουν λάθος, αλλά επειδή κάθε briefing γράφεται από μέσα στην κατάσταση που προσπαθεί να περιγράψει. Το πρόβλημα όπως παρουσιάζεται αρχικά είναι πάντα ένα σημείο εκκίνησης, ποτέ ένα τελικό σημείο. Ξεκινάμε δημιουργώντας αυτό που ονομάζουμε ταπισερί χώρου προβλήματος — μια οπτική εξωτερίκευση όλων όσων ξέρουμε, υποθέτουμε, αμφισβητούμε και δεν έχουμε κατανοήσει ακόμη για την πρόκληση. Είναι σκόπιμα μη ιεραρχική και μη κριτική. Σκοπός της είναι να καταστήσει ορατή την πλήρη πολυπλοκότητα της κατάστασης πριν αρχίσουμε να τη συμπιέζουμε.</p>
+
+    <p>Στη συνέχεια αναζητούμε μοτίβα. Επικαλύπτουμε εξωτερικό πλαίσιο — μετατοπίσεις αγοράς, τάσεις συμπεριφοράς, παρακείμενες πιέσεις. Μιλάμε με τους ανθρώπους που το briefing δεν ανέφερε. Κάνουμε την ερώτηση πίσω από την ερώτηση. Μόνο όταν η εικόνα είναι αρκετά πλούσια για να την εμπιστευτούμε αρχίζουμε να κινούμαστε προς τον ορισμό: ονομάζοντας την πραγματική ευκαιρία, πλαισιώνοντας την πρόκληση με τρόπο που επιτρέπει δημιουργική απόκριση αντί να την περιορίζει.</p>
+
+    <p>Αυτή δεν είναι αργή δουλειά. Είναι γρήγορη δουλειά που γίνεται σωστά. Ένα έργο που αφιερώνει τρεις εβδομάδες σε αυτό σωστά κινείται γρηγορότερα συνολικά από ένα έργο που αφιερώνει τρεις εβδομάδες χτίζοντας το λάθος πράγμα και τρεις μήνες προσπαθώντας να ανακάμψει. Το front-loading συμπιέζει τη συνολική χρονική γραμμή εξαλείφοντας τις ψεύτικες εκκινήσεις, τις διορθώσεις πορείας και τις δαπανηρές παρεξηγήσεις που προκύπτουν από τη δράση πάνω σε μια ατελή εικόνα.</p>
+
+    <p>Οι επιχειρήσεις που δυσκολεύονται περισσότερο με αυτό είναι αυτές που βρίσκονται υπό τη μεγαλύτερη πίεση. Δεν μπορούν να αντέξουν να επιβραδύνουν. Αλλά είναι επίσης, χαρακτηριστικά, αυτές που έχουν ήδη πληρώσει το κόστος της υπερβολικά γρήγορης κίνησης — η λανσαρισμένη προϊόν που έχασε τον στόχο, το rebranding που δεν έπιασε, η πρόσληψη που έλυσε το λάθος πρόβλημα.</p>
+
+    <p>Ξεκινήστε με το πρόβλημα. Ξεκινήστε πραγματικά με αυτό. Η λύση θα έρθει γρηγορότερα από ό,τι νομίζετε.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/index_gr.html#thinking" class="back-link">← Όλα τα άρθρα</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap-gr.html" class="next-article-link">
+          <span class="tag">Στρατηγική</span>
+          <span class="title">Το Χάσμα Σαφήνειας: Γιατί οι Επιχειρήσεις Τρέχουν αλλά δεν Αναπτύσσονται</span>
+        </a>
+        <a href="/article-org-chart-gr.html" class="next-article-link">
+          <span class="tag">Οργανισμοί</span>
+          <span class="title">Το Οργανόγραμμά σας Σας Λέει Ψέματα</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Locus Design + Innovation &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/locusforinnovation/">Instagram</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/company/locus-design-innovation/">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>

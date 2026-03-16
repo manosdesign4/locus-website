@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Το Οργανόγραμμά σας Σας Λέει Ψέματα — Locus Design + Innovation</title>
+  <meta name="description" content="Σε κάθε οργανισμό που έχουμε μελετήσει, οι άνθρωποι που κάνουν τα πράγματα να συμβαίνουν δεν ταιριάζουν με το επίσημο διάγραμμα δομής. Τι σημαίνει αυτό για τις στρατηγικές σας αποφάσεις." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --mid: #5a5a5a;
+      --light: #9a9a9a;
+      --rule: #e0ddd8;
+      --bg: #f7f5f1;
+      --white: #ffffff;
+      --accent: #2e5fa3;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo img { height: 28px; display: block; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-lang {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-lang a { color: var(--light); text-decoration: none; }
+    .nav-lang a.active { color: var(--ink); }
+
+    .article-hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .article-hero h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+
+    .article-lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--mid);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--light);
+      letter-spacing: 0.03em;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .article-meta span::after { content: '·'; margin-left: 1rem; }
+    .article-meta span:last-child::after { content: ''; }
+
+    .article-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #2a2a2a;
+      margin-bottom: 1.6rem;
+    }
+
+    .article-body p:first-child::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 400;
+      float: left;
+      line-height: 0.8;
+      margin: 0.1em 0.1em 0 0;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--ink);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.8rem 0;
+      margin: 2.5rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .article-footer-nav {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: 3rem 2rem;
+    }
+
+    .article-footer-nav-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--ink); }
+
+    .next-articles { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+    .next-article-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-decoration: none;
+      max-width: 220px;
+    }
+
+    .next-article-link .tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    .next-article-link .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--mid);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .next-article-link:hover .title { color: var(--ink); }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.9); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 3rem 1.25rem 2rem; }
+      .article-body { padding: 2rem 1.25rem 4rem; }
+      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index_gr.html" class="nav-logo">
+      <img src="https://locus-website-rho.vercel.app/logo_grey-blue.png" alt="Locus Design + Innovation" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index_gr.html#about">Σχετικά</a></li>
+      <li><a href="/index_gr.html#services">Υπηρεσίες</a></li>
+      <li><a href="/index_gr.html#process">Πώς Δουλεύουμε</a></li>
+      <li><a href="/index_gr.html#thinking">Οι Σκέψεις μας</a></li>
+      <li><a href="/index_gr.html#contact">Επικοινωνία</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="/article-org-chart.html">EN</a>
+      <a href="#" class="active">ΕΛ</a>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Οργανισμοί</span>
+    <h1>Το Οργανόγραμμά σας Σας <em>Λέει Ψέματα</em></h1>
+    <p class="article-lede">Σε κάθε οργανισμό που έχουμε μελετήσει, οι άνθρωποι που κάνουν τα πράγματα να συμβαίνουν δεν ταιριάζουν με το επίσημο διάγραμμα δομής. Τι σημαίνει αυτό για τον τρόπο που παίρνετε στρατηγικές αποφάσεις.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>6 λεπτά ανάγνωση</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Ανοίξτε οποιοδήποτε οργανόγραμμα και θα σας δείξει μια τακτοποιημένη ιεραρχία: ποιος αναφέρεται σε ποιον, ποιος κατέχει ποιον τίτλο, ποιος είναι υπεύθυνος για ποια λειτουργία. Είναι ένα χρήσιμο έγγραφο για HR και εταιρική διακυβέρνηση. Ως χάρτης του πώς λειτουργεί πραγματικά ο οργανισμός, είναι σχεδόν εξ ολοκλήρου μυθοπλασία.</p>
+
+    <p>Οι πραγματικοί οργανισμοί λειτουργούν με ένα διαφορετικό είδος νοημοσύνης. Αυτή βρίσκεται σε ανθρώπους που σπάνια βρίσκονται στην κορυφή κανενός οργανογράμματος — και συχνά δεν αναφέρονται καθόλου σε αυτό.</p>
+
+    <p>Μετά από χρόνια έρευνας στον τρόπο που οι επιχειρήσεις πραγματικά καινοτομούν, ένα από τα πιο σταθερά ευρήματα είναι η ύπαρξη αυτού που ονομάσαμε αφανείς επαγγελματίες. Πρόκειται για ανθρώπους των οποίων η συνεισφορά στον οργανισμό είναι σε μεγάλο βαθμό αόρατη στην επίσημη ανάλυση, αλλά των οποίων η απουσία θα προκαλούσε άμεση και σοβαρή διαταραχή. Είναι το άτομο που ξέρει ποιον προμηθευτή να καλέσει όταν ο επίσημος αποτύχει. Ο εκτιμητής που διαβάζει μια πρόταση έργου και διαισθητικά γνωρίζει τι θα κοστίσει πραγματικά, όχι τι λέει το υπολογιστικό φύλλο. Ο ανεπίσημος μεσάζων που διατηρεί σχέσεις μεταξύ τμημάτων που δεν έχουν επίσημη σύνδεση. Ο αυτοδίδακτος ειδικός που έχει αναπτύξει μια ικανότητα στην οποία η επιχείρηση βασίζεται καθημερινά αλλά δεν έχει ποτέ τεκμηριωθεί, δεν έχει ποτέ μεταδοθεί σε κάποιον άλλον, και δεν έχει ποτέ χρεωθεί.</p>
+
+    <div class="pull-quote">
+      «Το οργανόγραμμα σας είπε ποιος είχε εξουσία. Δεν σας είπε ποιος είχε επιρροή.»
+    </div>
+
+    <p>Δεν εμφανίζονται σε αξιολογήσεις απόδοσης ως στρατηγικά περιουσιακά στοιχεία. Η γνώση τους σπάνια καταγράφεται σε κάποιο σύστημα. Όταν φεύγουν, η αποχώρησή τους συχνά γίνεται κατανοητή μόνο εκ των υστέρων — όταν αυτό που κρατούσαν αθόρυβα μαζί αρχίζει να διαλύεται.</p>
+
+    <p>Αυτή δεν είναι μια μικρή παρατήρηση. Έχει σημαντικές επιπτώσεις στον τρόπο που παίρνετε στρατηγικές αποφάσεις.</p>
+
+    <p>Αν σχεδιάζετε μια νέα υπηρεσία και ρωτάτε μόνο τους ανθρώπους που σας δείχνει το οργανόγραμμα, θα πάρετε μια μερική εικόνα. Οι άνθρωποι που γνωρίζουν πού βρίσκεται πραγματικά η τριβή — πού σπάνε οι μεταβιβάσεις, πού οι πελάτες είναι αθόρυβα απογοητευμένοι, πού η ομάδα αντισταθμίζει καθημερινά μια διαδικασία που δεν έχει λειτουργήσει ποτέ — αυτοί οι άνθρωποι βρίσκονται συχνά δύο ή τρία επίπεδα μακριά από τη συζήτηση. Μερικές φορές δεν είναι καν υπάλληλοι. Μερικές φορές είναι ένας μακροχρόνιος προμηθευτής, ένας πιστός πελάτης, ή ένα μέλος της οικογένειας που απαντά στο τηλέφωνο όταν το γραφείο είναι κλειστό.</p>
+
+    <p>Αν σχεδιάζετε ένα πρόγραμμα αλλαγής και χαρτογραφείτε τους stakeholders σας βάσει ρόλου και ιεραρχίας, θα ξοδέψετε ενέργεια στα λάθη σημεία και θα εκπλαγείτε από αντίσταση που δεν ήταν ορατή σε κανένα χάρτη.</p>
+
+    <p>Αν προσπαθείτε να κατανοήσετε τι κάνει την επιχείρησή σας καλή — τι παράγει πραγματικά τα αποτελέσματα που εκτιμούν οι πελάτες — και κοιτάτε μόνο αυτό που είναι επίσημα τεκμηριωμένο, θα χάσετε το μεγαλύτερο μέρος της απάντησης. Σημαντικό μέρος της οργανωτικής ικανότητας είναι άρρητο. Ζει στην πράξη, όχι στην πολιτική. Στην κρίση, όχι στη διαδικασία.</p>
+
+    <p>Αυτό που απαιτείται είναι ένα διαφορετικό είδος διερεύνησης. Όχι η έρευνα του συμβούλου. Όχι η συνέντευξη διοίκησης. Κάτι πιο κοντά στην πραγματική επιτόπια έρευνα — η υπομονετική, περίεργη, μη ιεραρχική διαδικασία κατανόησης του πώς πραγματικά συμβαίνει η δουλειά, ποιος την κάνει πραγματικά να συμβαίνει, και τι θα έπρεπε να ισχύει ώστε η αλλαγή να αρθρωθεί αντί να αναπηδήσει.</p>
+
+    <p>Στη Locus προσεγγίζουμε τους οργανισμούς με τον τρόπο που ένας καλός σχεδιαστής προσεγγίζει ένα briefing: με σκόπιμη αφέλεια. Δεν υποθέτουμε ότι ξέρουμε ποιο είναι το πρόβλημα πριν κοιτάξουμε. Δεν προνομιούμε τις επίσημες αφηγήσεις έναντι των ανεπίσημων. Ακολουθούμε τη δουλειά, όχι το οργανόγραμμα.</p>
+
+    <p>Οι άνθρωποι που κάνουν τα πράγματα να συμβαίνουν είναι συχνά οι άνθρωποι που κανείς δεν ρώτησε. Ξεκινήστε από αυτούς.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/index_gr.html#thinking" class="back-link">← Όλα τα άρθρα</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap-gr.html" class="next-article-link">
+          <span class="tag">Στρατηγική</span>
+          <span class="title">Το Χάσμα Σαφήνειας: Γιατί οι Επιχειρήσεις Τρέχουν αλλά δεν Αναπτύσσονται</span>
+        </a>
+        <a href="/article-front-loading-gr.html" class="next-article-link">
+          <span class="tag">Μέθοδος</span>
+          <span class="title">Front-Loading: Γιατί το Αργό Ξεκίνημα σας Φέρνει Πιο Γρήγορα στον Στόχο</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Locus Design + Innovation &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/locusforinnovation/">Instagram</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/company/locus-design-innovation/">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
