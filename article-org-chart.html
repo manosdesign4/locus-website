@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Org Chart Is Lying To You — Locus Design + Innovation</title>
+  <meta name="description" content="In every organisation we've studied, the people who make things happen don't match the structure diagram. What this means for strategic decisions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --mid: #5a5a5a;
+      --light: #9a9a9a;
+      --rule: #e0ddd8;
+      --bg: #f7f5f1;
+      --white: #ffffff;
+      --accent: #2e5fa3;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo img {
+      height: 28px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-lang {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-lang a { color: var(--light); text-decoration: none; }
+    .nav-lang a.active { color: var(--ink); }
+
+    /* HERO */
+    .article-hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .article-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .article-hero h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+
+    .article-lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--mid);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--light);
+      letter-spacing: 0.03em;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .article-meta span::after {
+      content: '·';
+      margin-left: 1rem;
+    }
+
+    .article-meta span:last-child::after { content: ''; }
+
+    /* BODY */
+    .article-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #2a2a2a;
+      margin-bottom: 1.6rem;
+    }
+
+    .article-body p:first-child::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 400;
+      float: left;
+      line-height: 0.8;
+      margin: 0.1em 0.1em 0 0;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--ink);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.8rem 0;
+      margin: 2.5rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    /* FOOTER NAV */
+    .article-footer-nav {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: 3rem 2rem;
+    }
+
+    .article-footer-nav-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--ink); }
+
+    .next-articles {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .next-article-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-decoration: none;
+      max-width: 220px;
+    }
+
+    .next-article-link .tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    .next-article-link .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--mid);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    .next-article-link:hover .title { color: var(--ink); }
+
+    /* SITE FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.9); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 3rem 1.25rem 2rem; }
+      .article-body { padding: 2rem 1.25rem 4rem; }
+      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="https://locus-website-rho.vercel.app/logo_grey-blue.png" alt="Locus Design + Innovation" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#process">How We Work</a></li>
+      <li><a href="/#thinking">Our Thinking</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="#" class="active">EN</a>
+      <a href="#">GR</a>
+    </div>
+  </nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Organisations</span>
+    <h1>Your Org Chart Is <em>Lying</em> To You</h1>
+    <p class="article-lede">In every organisation we've studied, the people who make things happen don't match the structure diagram. What this means for how you make strategic decisions.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>6 min read</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Pull up any organisation chart and it will show you a tidy hierarchy: who reports to whom, who holds what title, who is responsible for which function. It is a useful document for HR and governance. As a map of how the organisation actually works, it is almost entirely fiction.</p>
+
+    <p>Real organisations run on a different kind of intelligence. It lives in people who are rarely at the top of any chart — and often not named on it at all.</p>
+
+    <p>In years of researching how businesses actually innovate, one of the most consistent findings is the existence of what we came to call obscure practitioners. These are people whose contribution to the organisation is largely invisible to formal analysis, but whose absence would cause immediate and serious disruption. They are the person who knows which supplier to call when the official one fails. The estimator who reads a project brief and intuitively knows what it will actually cost, not what the spreadsheet says. The unofficial broker who holds relationships across departments that have no formal connection. The self-taught expert who has built a capability the business relies on every day but has never documented, never trained anyone else in, and never charged for.</p>
+
+    <div class="pull-quote">
+      "The org chart told you who held authority. It did not tell you who held influence."
+    </div>
+
+    <p>They do not appear in performance reviews as strategic assets. Their knowledge is rarely captured in any system. When they leave, their departure is often only understood in retrospect — when the thing they were quietly holding together starts to fall apart.</p>
+
+    <p>This is not a small observation. It has significant implications for how you make strategic decisions.</p>
+
+    <p>If you are designing a new service and you ask only the people the org chart points you toward, you will get a partial picture. The people who know where the friction actually lives — where the handoffs break down, where customers are quietly disappointed, where the team quietly compensates every day for a process that has never worked — those people are often two or three levels away from the conversation. Sometimes they are not employees at all. Sometimes they are a long-standing supplier, a loyal customer, or a family member who answers the phone when the office is closed.</p>
+
+    <p>If you are planning a change programme and you map your stakeholders by role and seniority, you will spend energy in the wrong places and be surprised by resistance that wasn't visible on any map.</p>
+
+    <p>If you are trying to understand what makes your business good — what actually produces the outcomes that clients value — and you only look at what is formally documented, you will miss most of the answer. A significant proportion of organisational capability is tacit. It lives in practice, not in policy. In judgment, not in procedure.</p>
+
+    <p>What this requires is a different kind of investigation. Not the consultant's survey. Not the management interview. Something closer to genuine fieldwork — the patient, curious, non-hierarchical process of understanding how work actually happens, who actually makes it happen, and what would need to be true for change to land rather than bounce.</p>
+
+    <p>At Locus we approach organisations the way a good designer approaches a brief: with deliberate naivety. We do not assume we know what the problem is before we look. We do not privilege formal accounts over informal ones. We follow the work, not the chart.</p>
+
+    <p>The people who make things happen are often the people nobody asked. Start with them.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/#thinking" class="back-link">← All articles</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap.html" class="next-article-link">
+          <span class="tag">Strategy</span>
+          <span class="title">The Clarity Gap: Why Businesses Run But Don't Grow</span>
+        </a>
+        <a href="/article-front-loading.html" class="next-article-link">
+          <span class="tag">Method</span>
+          <span class="title">Front-Loading: Why Starting Slow Gets You There Faster</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Locus Design + Innovation &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/locusforinnovation/">Instagram</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/company/locus-design-innovation/">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
