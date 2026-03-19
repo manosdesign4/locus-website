@@ -161,6 +161,23 @@
     .csb .price{font-size:18px;font-weight:600;color:var(--sky);margin-top:14px;margin-bottom:0}
     .btn-c{display:inline-block;margin-top:18px;padding:13px 32px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:.3s}
     .btn-c:hover{background:#1E92BD}
+
+    /* CONTACT FORM */
+    .co-form{margin-top:32px}
+    .co-form h3{font-family:var(--serif);font-size:21px;color:var(--white);margin-bottom:16px}
+    .co-form input,.co-form textarea{width:100%;padding:12px 14px;margin-bottom:12px;border:1px solid rgba(255,255,255,.12);border-radius:4px;background:rgba(255,255,255,.06);color:var(--white);font-family:var(--sans);font-size:14px;line-height:1.5;transition:border-color .2s}
+    .co-form input::placeholder,.co-form textarea::placeholder{color:rgba(255,255,255,.3)}
+    .co-form input:focus,.co-form textarea:focus{outline:none;border-color:var(--sky)}
+    .co-form textarea{resize:vertical;min-height:100px}
+    .co-form .form-check{display:flex;align-items:flex-start;gap:10px;margin:8px 0 18px}
+    .co-form .form-check input[type="checkbox"]{width:auto;margin:0;margin-top:3px;accent-color:var(--sky);cursor:pointer}
+    .co-form .form-check label{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;cursor:pointer}
+    .co-form button{display:inline-block;padding:13px 32px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:.3s}
+    .co-form button:hover{background:#1E92BD}
+    .co-form .form-msg{margin-top:12px;font-size:13px;color:var(--sky);display:none}
+
+    /* MAP */
+    .map-section{width:100%;height:320px;filter:grayscale(0.3);border-top:1px solid rgba(255,255,255,.06)}
     .ft{background:#1a1a1a;color:rgba(255,255,255,.28);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
     .ft-links{display:flex;gap:24px}
     .ft-links a{color:rgba(255,255,255,.28);text-decoration:none;font-size:12px;transition:.2s}
@@ -330,9 +347,26 @@
     <div class="co-info">
       <p>Αν κάτι από αυτά σου μίλησε &#8212; ή αν έχεις μια πρόκληση που χρειάζεται σαφήνεια και δράση &#8212; επικοινώνησε μαζί μας. Το πρώτο βήμα είναι πάντα μια συζήτηση.</p>
       <div class="co-det">
-        <div><span>Email</span><p><a href="/cdn-cgi/l/email-protection#2d41424e585e4b425f444343425b4c594442430b0e1b19164a404c4441034e4240">locusforinnovation&#64;gmail.com</a></p></div>
+        <div><span>Email</span><p><a href="mailto:locusforinnovation@gmail.com">locusforinnovation&#64;gmail.com</a></p></div>
         <div><span>WhatsApp</span><p><a href="https://wa.me/306944800352">+30 6944 800 352</a></p></div>
         <div><span>Τοποθεσία</span><p>Μελετίου Πηγα 17, Χανιά, Κρήτη &#183; Ηνωμένο Βασίλειο</p></div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="co-form">
+        <h3>Στείλτε μας μήνυμα</h3>
+        <form id="contactForm" action="https://formspree.io/f/mjgallky" method="POST">
+          <input type="text" name="name" placeholder="Το όνομά σας" required>
+          <input type="email" name="email" placeholder="Το email σας" required>
+          <input type="tel" name="phone" placeholder="Κινητό τηλέφωνο (προαιρετικό)">
+          <textarea name="message" placeholder="Πώς μπορούμε να βοηθήσουμε;" rows="4"></textarea>
+          <div class="form-check">
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="newsletter">Θα ήθελα να λαμβάνω περιοδικά νέα και ιδέες από τη Locus.</label>
+          </div>
+          <button type="submit">Αποστολή μηνύματος &#8594;</button>
+          <p class="form-msg" id="formMsg">Ευχαριστούμε! Θα επικοινωνήσουμε σύντομα.</p>
+        </form>
       </div>
     </div>
     <div class="csb">
@@ -344,6 +378,9 @@
     </div>
   </div>
 </section>
+
+<!-- MAP -->
+<iframe class="map-section" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.585864593968!2d24.011324875544826!3d35.51451723911461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149c7d6a4c731289%3A0x329bba1ed6b92771!2sLocus%20Design%20%2B%20Innovation!5e0!3m2!1sen!2sgr!4v1773953192117!5m2!1sen!2sgr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <footer class="ft">
   <span>&#169; 2026 Locus Design + Innovation</span>
@@ -360,6 +397,38 @@
     if (window.scrollY > 80) { nav.classList.add('scrolled'); }
     else { nav.classList.remove('scrolled'); }
   });
+
+  // Contact form handler
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var btn = form.querySelector('button');
+      var msg = document.getElementById('formMsg');
+      btn.textContent = '\u0391\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE...';
+      btn.disabled = true;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r) {
+        if (r.ok) {
+          msg.style.display = 'block';
+          form.reset();
+          btn.textContent = '\u0395\u03C3\u03C4\u03AC\u03BB\u03B7!';
+          setTimeout(function(){ btn.textContent = '\u0391\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE \u03BC\u03B7\u03BD\u03CD\u03BC\u03B1\u03C4\u03BF\u03C2 \u2192'; btn.disabled = false; }, 3000);
+        } else {
+          btn.textContent = '\u03A3\u03C6\u03AC\u03BB\u03BC\u03B1 \u2014 \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC';
+          btn.disabled = false;
+        }
+      }).catch(function() {
+        btn.textContent = '\u03A3\u03C6\u03AC\u03BB\u03BC\u03B1 \u2014 \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC';
+        btn.disabled = false;
+      });
+    });
+  }
+
   var items = document.querySelectorAll('.fi');
   for (var i = 0; i < items.length; i++) { items[i].classList.add('animate'); }
   var observer = new IntersectionObserver(function(entries) {
