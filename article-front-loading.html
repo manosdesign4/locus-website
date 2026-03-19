@@ -18,7 +18,7 @@
       --rule: #e0ddd8;
       --bg: #f7f5f1;
       --white: #ffffff;
-      --accent: #2e5fa3;
+      --accent: #26AADB;
     }
 
     html { scroll-behavior: smooth; }
@@ -111,7 +111,7 @@
 
     .article-hero h1 em {
       font-style: italic;
-      color: var(--mid);
+      color: var(--accent);
     }
 
     .article-lede {
@@ -185,64 +185,16 @@
     /* FUNNEL DIAGRAM */
     .funnel-diagram {
       margin: 2.5rem 0;
-      padding: 2rem 1.5rem;
-      background: var(--white);
-      border: 1px solid var(--rule);
     }
 
-    .funnel-diagram-title {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--light);
-      margin-bottom: 1.5rem;
-    }
-
-    .funnel-stages {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--rule);
-    }
-
-    .funnel-stage {
-      background: var(--bg);
-      padding: 1rem 0.75rem;
-    }
-
-    .funnel-stage-label {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--light);
-      margin-bottom: 0.4rem;
-    }
-
-    .funnel-stage-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-    }
-
-    .funnel-stage:nth-child(1) .funnel-stage-name,
-    .funnel-stage:nth-child(2) .funnel-stage-name {
-      color: var(--accent);
-    }
-
-    .funnel-stage-desc {
-      font-size: 0.78rem;
-      line-height: 1.5;
-      color: var(--mid);
+    .funnel-diagram img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .funnel-emphasis {
       margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--rule);
       font-size: 0.78rem;
       color: var(--mid);
       font-style: italic;
@@ -331,7 +283,6 @@
       .article-hero { padding: 3rem 1.25rem 2rem; }
       .article-body { padding: 2rem 1.25rem 4rem; }
       .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
-      .funnel-stages { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -375,29 +326,7 @@
     <p>The logic is straightforward. A solution built on a poorly understood problem does not just fail to solve that problem — it often makes it worse. You have now invested time, money, and political capital in an answer to the wrong question. Reversing course is significantly harder than it would have been to start more carefully. The cost of late correction dwarfs the cost of early patience.</p>
 
     <div class="funnel-diagram">
-      <p class="funnel-diagram-title">The Locus Design Funnel</p>
-      <div class="funnel-stages">
-        <div class="funnel-stage">
-          <div class="funnel-stage-label">01 — Front end</div>
-          <div class="funnel-stage-name">Discover</div>
-          <div class="funnel-stage-desc">Broad exploration. Research, observation, stakeholder engagement. All assumptions are open to challenge.</div>
-        </div>
-        <div class="funnel-stage">
-          <div class="funnel-stage-label">02 — Front end</div>
-          <div class="funnel-stage-name">Define</div>
-          <div class="funnel-stage-desc">Synthesis and framing. Discovery is sharpened into a clear articulation of the core challenge or opportunity.</div>
-        </div>
-        <div class="funnel-stage">
-          <div class="funnel-stage-label">03</div>
-          <div class="funnel-stage-name">Develop</div>
-          <div class="funnel-stage-desc">Generating, prototyping, and testing potential solutions within the constraints established by the framing work.</div>
-        </div>
-        <div class="funnel-stage">
-          <div class="funnel-stage-label">04</div>
-          <div class="funnel-stage-name">Deliver</div>
-          <div class="funnel-stage-desc">Refinement, implementation, and handover of products, services, and strategies ready for the real world.</div>
-        </div>
-      </div>
+      <img src="https://locus-website-rho.vercel.app/funnel.png" alt="The Locus Design Funnel: Discover, Define, Develop, Deliver" />
       <p class="funnel-emphasis">The front end — Discover and Define — is where value is built. Everything downstream converts what the front end makes available.</p>
     </div>
 
