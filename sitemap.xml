@@ -2,84 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- English Homepage -->
+  <!-- Homepages -->
   <url>
     <loc>https://locus-consulting.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/" />
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/index_gr.html" />
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/index_gr.html"/>
+    <lastmod>2026-03-22</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- Greek Homepage -->
   <url>
     <loc>https://locus-consulting.com/index_gr.html</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/index_gr.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/" />
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/index_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/"/>
+    <lastmod>2026-03-22</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- Article: The Clarity Gap (EN) -->
+  <!-- Approach -->
+  <url>
+    <loc>https://locus-consulting.com/approach.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/approach.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/approach_gr.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/approach_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/approach_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/approach.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cases / Work -->
+  <url>
+    <loc>https://locus-consulting.com/work.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/work.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/work_gr.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/work_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/work_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/work.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://locus-consulting.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/about_gr.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/about_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/about_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/about.html"/>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Articles -->
   <url>
     <loc>https://locus-consulting.com/article-clarity-gap.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-clarity-gap.html" />
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-clarity-gap-gr.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-clarity-gap.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-clarity-gap-gr.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Article: The Clarity Gap (GR) -->
   <url>
     <loc>https://locus-consulting.com/article-clarity-gap-gr.html</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-clarity-gap-gr.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-clarity-gap.html" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-clarity-gap-gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-clarity-gap.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Article: Front-Loading (EN) -->
   <url>
     <loc>https://locus-consulting.com/article-front-loading.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-front-loading.html" />
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-front-loading-gr.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-front-loading.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-front-loading-gr.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Article: Front-Loading (GR) -->
   <url>
     <loc>https://locus-consulting.com/article-front-loading-gr.html</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-front-loading-gr.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-front-loading.html" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-front-loading-gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-front-loading.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Article: Org Chart (EN) -->
   <url>
     <loc>https://locus-consulting.com/article-org-chart.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-org-chart.html" />
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-org-chart-gr.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-org-chart.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-org-chart-gr.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Article: Org Chart (GR) -->
   <url>
     <loc>https://locus-consulting.com/article-org-chart-gr.html</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-org-chart-gr.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-org-chart.html" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/article-org-chart-gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/article-org-chart.html"/>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

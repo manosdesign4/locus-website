@@ -119,7 +119,7 @@
     /* SERVICES */
     .services{background:var(--white)}
     .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0;margin-top:40px;max-width:1100px}
-    .sc{padding:0;transition:.3s;cursor:default;overflow:hidden;border:1px solid var(--mid);margin:-0.5px}
+    .sc{padding:0;transition:.3s;cursor:pointer;overflow:hidden;border:1px solid var(--mid);margin:-0.5px;text-decoration:none;color:inherit;display:block}
     .sc-img{width:100%;overflow:hidden}
     .sc-img img{width:100%;height:auto;display:block;transition:transform .5s ease}
     .sc:hover .sc-img img{transform:scale(1.03)}
@@ -147,6 +147,18 @@
     .diag .sb{color:rgba(255,255,255,.55);margin:0 auto 32px}
     .btn{display:inline-block;padding:15px 44px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:.3s}
     .btn:hover{background:#1E92BD;transform:translateY(-1px)}
+
+
+    /* APPROACH TEASER */
+    .approach-teaser{background:var(--light)}
+
+    /* PROOF STRIP */
+    .proof{background:var(--light)}
+    .proof-list{margin-top:32px;max-width:740px}
+    .proof-item{padding:18px 0;border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:baseline;gap:16px}
+    .proof-item:last-child{border-bottom:none}
+    .proof-tag{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);white-space:nowrap;min-width:120px}
+    .proof-title{font-family:var(--serif);font-size:19px;color:var(--charcoal);line-height:1.3}
 
     /* ABOUT */
     .about{background:var(--white)}
@@ -269,6 +281,7 @@
 </head>
 <body>
 
+
 <!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="nav-left">
@@ -278,10 +291,11 @@
   </div>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#process">How We Work</a>
+      <a href="/approach.html">How We Work</a>
+      <a href="/work.html">Cases</a>
       <a href="#thinking">Our Thinking</a>
+      <a href="/about.html">About</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="lang-switch">
@@ -291,10 +305,11 @@
     <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
   </div>
   <div class="nav-mm">
-    <a href="#about" onclick="this.parentElement.classList.remove('active')">About</a>
     <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
-    <a href="#process" onclick="this.parentElement.classList.remove('active')">How We Work</a>
+    <a href="/approach.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
+    <a href="/work.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
     <a href="#thinking" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
+    <a href="/about.html" onclick="this.parentElement.classList.remove('active')">About</a>
     <a href="#contact" onclick="this.parentElement.classList.remove('active')">Contact</a>
   </div>
 </nav>
@@ -317,42 +332,8 @@
   <p class="sl">The challenge</p>
   <h2 class="sh">Most businesses don&#8217;t lack effort.<span class="sh-blue"> They lack clarity.</span></h2>
   <div class="sb">
-    <p>You run but you don&#8217;t grow. You are busy but not effective. Your ideas stay on paper. Your goals exist but aren&#8217;t understood by the team. Decisions get made reactively, not strategically. Sounds familiar?</p>
-    <p>The common thread isn&#8217;t a lack of resources, talent, or ambition. It&#8217;s the absence of strategic clarity &#8212; the gap between what a business intends and what it actually achieves.</p>
-    <p>We call this <span class="cg-text">The Clarity Gap</span>. Locus exists to close it &#8212; not just by naming it, but through design-led sensemaking, strategy, and the creation of real solutions.</p>
-  </div>
-</section>
-
-<div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
-
-<!-- HOW WE WORK -->
-<section class="process fi" id="process">
-  <p class="sl">Our approach</p>
-  <h2 class="sh">From framing to action.<br>We <span class="sh-blue">design</span> the whole journey.</h2>
-  <div class="sb">
-    <p>Our process adapts the Design Council UK&#8217;s Double Diamond into what we call the Design Funnel &#8212; a model that reflects how design-led strategic work actually unfolds. We invest disproportionate energy in the early stages: understanding the situation, surfacing assumptions, and framing the right question.</p>
-    <p>But clarity is just the beginning. We design and develop actual solutions: new products, services, experiences, business models, and communication systems &#8212; either through our own practice or by activating our extended network of specialist collaborators.</p>
-    <p>Central to how we work is a co-creation mindset. We don&#8217;t deliver solutions from the outside &#8212; we build them with you. Every engagement is structured around six enabling conditions that make collaborative thinking productive.</p>
-  </div>
-  <div class="funnel-img">
-    <img src="funnel.png" alt="The Locus Design Funnel: Discover, Define, Develop, Deliver">
-  </div>
-  <div class="fp">
-    <div><p class="pn w">Discover</p><p>Broad exploration. Research, observation, stakeholder engagement. All assumptions are open to challenge.</p></div>
-    <div><p class="pn m">Define</p><p>Synthesis and framing. Discovery is sharpened into a clear articulation of the core challenge or opportunity.</p></div>
-    <div><p class="pn c">Develop</p><p>Generating, prototyping, and testing potential solutions within the constraints established by the framing work.</p></div>
-    <div><p class="pn b">Deliver</p><p>Refinement, implementation, and handover of products, services, strategies, and systems ready for the real world.</p></div>
-  </div>
-  <div class="enablers">
-    <h3>The six co-creation enablers</h3>
-    <div class="enablers-grid">
-      <div class="enabler"><strong>Safe Environment</strong><span>Intellectual and psychological safety. Permission to be wrong, to speculate, to voice half-formed ideas.</span></div>
-      <div class="enabler"><strong>Open, Questioning Stance</strong><span>Challenge assumptions through speculation rather than confrontation. &#8220;What if?&#8221; as a generative move.</span></div>
-      <div class="enabler"><strong>Semi-Structured Process</strong><span>Enough structure to create momentum. Enough openness to allow emergence and adaptation.</span></div>
-      <div class="enabler"><strong>Visualisation as Thinking</strong><span>Maps, diagrams, and artefacts used to reason &#8212; not to decorate. Making complexity visible.</span></div>
-      <div class="enabler"><strong>Diverse Perspectives</strong><span>Stakeholders as contributors, not informants. Value comes from the collision of different views.</span></div>
-      <div class="enabler"><strong>Catalytic Facilitation</strong><span>Provoke insight rather than control outcomes. We steer without prescribing.</span></div>
-    </div>
+    <p>You run but you don&#8217;t grow. You are busy but not directed. Decisions get made reactively, not strategically. The common thread isn&#8217;t a lack of resources, talent, or ambition &#8212; it&#8217;s the absence of strategic clarity.</p>
+    <p>We call this <span class="cg-text">The Clarity Gap</span>. Locus exists to close it &#8212; through design-led sensemaking, strategy, and the creation of real solutions.</p>
   </div>
 </section>
 
@@ -361,53 +342,49 @@
   <p class="sl">What we do</p>
   <h2 class="sh" style="white-space:nowrap">Six territories. One design-led approach.</h2>
   <div class="sg">
-    <div class="sc"><div class="sc-img"><img src="svc-transform.png" alt="Business Transformation"></div><div class="sc-content"><h3 class="sn">Business Transformation</h3><p class="st">When the business works &#8212; but doesn&#8217;t grow.</p><p class="sd">Competitive landscape mapping, differentiation strategy, business model exploration. For established businesses that need to see their situation from above &#8212; and design a way forward.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-newbiz.png" alt="New Business Models"></div><div class="sc-content"><h3 class="sn">New Business Models</h3><p class="st">When the idea is strong &#8212; but the architecture isn&#8217;t.</p><p class="sd">Business Model Canvas facilitation, value proposition design, strategic planning. For founders who have the vision but need the structure to make it viable and scalable.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-cx.png" alt="Experience Design"></div><div class="sc-content"><h3 class="sn">Experience Design</h3><p class="st">When the product is good &#8212; but the experience isn&#8217;t.</p><p class="sd">Service blueprints, customer journeys, touchpoint analysis, experience strategy. For businesses where quality alone isn&#8217;t enough &#8212; the whole experience needs designing.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-creative.png" alt="Creative Environments"></div><div class="sc-content"><h3 class="sn">Creative Environments</h3><p class="st">When teams have knowledge &#8212; but can&#8217;t unlock it together.</p><p class="sd">Co-creation workshop design, innovation facilitation, team alignment. For organisations where the right conversations aren&#8217;t happening.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-products.png" alt="New Products"></div><div class="sc-content"><h3 class="sn">New Products &#38; Propositions</h3><p class="st">When there&#8217;s demand &#8212; but no clear offer.</p><p class="sd">Concept development, proposition framing, prototyping, feasibility exploration. From initial idea through to developed solutions ready for market.</p></div></div>
-    <div class="sc"><div class="sc-img"><img src="svc-visibility.png" alt="Strategic Marketing"></div><div class="sc-content"><h3 class="sn">Strategic Marketing</h3><p class="st">When the work is excellent &#8212; but nobody sees it.</p><p class="sd">Market positioning, brand identity development, storytelling, strategic communication. For businesses competing on price when they should compete on meaning.</p></div></div>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-transform.png" alt="Business Transformation"></div><div class="sc-content"><h3 class="sn">Business Transformation</h3><p class="st">When the business works &#8212; but doesn&#8217;t grow.</p></div></a>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-newbiz.png" alt="New Business Models"></div><div class="sc-content"><h3 class="sn">New Business Models</h3><p class="st">When the idea is strong &#8212; but the architecture isn&#8217;t.</p></div></a>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-cx.png" alt="Experience Design"></div><div class="sc-content"><h3 class="sn">Experience Design</h3><p class="st">When the product is good &#8212; but the experience isn&#8217;t.</p></div></a>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-creative.png" alt="Creative Environments"></div><div class="sc-content"><h3 class="sn">Creative Environments</h3><p class="st">When teams have knowledge &#8212; but can&#8217;t unlock it together.</p></div></a>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-products.png" alt="New Products"></div><div class="sc-content"><h3 class="sn">New Products &#38; Propositions</h3><p class="st">When there&#8217;s demand &#8212; but no clear offer.</p></div></a>
+    <a href="/approach.html" class="sc"><div class="sc-img"><img src="svc-visibility.png" alt="Strategic Marketing"></div><div class="sc-content"><h3 class="sn">Strategic Marketing</h3><p class="st">When the work is excellent &#8212; but nobody sees it.</p></div></a>
   </div>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
 
-<!-- CHALLENGES -->
-<section class="challenges fi" id="challenges">
+<!-- APPROACH TEASER -->
+<section class="approach-teaser fi">
+  <p class="sl">Our approach</p>
+  <h2 class="sh">From framing to action.<br>We <span class="sh-blue">design</span> the whole journey.</h2>
+  <div class="sb">
+    <p>Our process adapts the Double Diamond into a design-led funnel built around co-creation, visual tools, and strategic facilitation. The result: clarity that leads to real products, services, and strategies.</p>
+  </div>
+  <a href="/approach.html" class="tl" style="font-size:14px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:.5px;display:inline-block;margin-top:8px">See how we work &#8594;</a>
+</section>
+
+<div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
+
+<!-- PROOF STRIP -->
+<section class="proof fi" id="work">
   <p class="sl">Our work</p>
-  <h2 class="sh">Selected challenges</h2>
-  <div class="sb" style="margin-bottom:0"><p>Every engagement begins with a situation that needs clarity &#8212; and ends with designed solutions. Here are some of the challenges we&#8217;ve helped navigate.</p></div>
-  <div class="cg-grid">
-    <div class="ch"><p class="ch-tag">Manufacturing &#183; Design Transformation</p><h3 class="ch-title">The Glass Manufacturer That Discovered Design</h3><p class="ch-sit">A specialist manufacturer needed to shift from a production mentality to a design-led, customer-centred approach. Their product development was ad-hoc and dependent on a few key individuals.</p><div class="ch-det"><div><h4>Approach</h4><p>Process mapping using proprietary visual tools, interviews across leadership and production teams, surfacing hidden innovation practices.</p></div><div><h4>What emerged</h4><p>A visual map of their actual innovation process &#8212; revealing they had unconsciously outsourced a critical capability. This triggered a strategic reassessment of partnerships.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Family Business &#183; Generational Transition</p><h3 class="ch-title">A Century-Old Manufacturer and The Estimator</h3><p class="ch-sit">A 100+ year-old family manufacturer was navigating generational transition. A key figure &#8212; &#8220;the Estimator&#8221; &#8212; held critical knowledge that didn&#8217;t appear on any chart.</p><div class="ch-det"><div><h4>Approach</h4><p>Deep process mapping, multi-stakeholder interviews, identifying informal knowledge networks sustaining the organisation&#8217;s decision-making.</p></div><div><h4>What emerged</h4><p>The &#8220;Estimator&#8221; was revealed as the central innovation broker &#8212; fundamentally reframing how the company understood its own capabilities.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Public Sector &#183; Complex Problem</p><h3 class="ch-title">From Wicked Problem to Design Brief</h3><p class="ch-sit">A public sector organisation had tried multiple approaches to a complex social problem and failed. Standard methods weren&#8217;t working.</p><div class="ch-det"><div><h4>Approach</h4><p>Co-creation sessions with diverse stakeholders, visual scenario generation, creative reframing through design-led facilitation.</p></div><div><h4>What emerged</h4><p>Three actionable challenge frames &#8212; replacing one overwhelming &#8220;wicked problem&#8221; with three design briefs teams could work on.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Agri-food &#183; Strategic Opportunity</p><h3 class="ch-title">Nine Opportunities from One Conversation</h3><p class="ch-sit">A Cretan agricultural business wanted to grow but couldn&#8217;t see beyond its current operations.</p><div class="ch-det"><div><h4>Approach</h4><p>Business situation mapping, opportunity identification, strategic framing &#8212; all within a single structured session.</p></div><div><h4>What emerged</h4><p>Nine distinct business opportunities &#8212; giving the founders a portfolio of strategic options rather than a single path.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">F&#38;B &#183; Experience Design</p><h3 class="ch-title">Experience Before Opening</h3><p class="ch-sit">A new food and beverage venture had a strong product concept but hadn&#8217;t designed the customer experience.</p><div class="ch-det"><div><h4>Approach</h4><p>Service design principles, experience mapping, touchpoint design &#8212; all before the doors opened.</p></div><div><h4>What emerged</h4><p>A complete experience strategy &#8212; a deliberate design of how guests would feel, not just what they would eat.</p></div></div></div>
+  <h2 class="sh">Selected challenges we&#8217;ve helped navigate.</h2>
+  <div class="proof-list">
+    <div class="proof-item"><span class="proof-tag">Manufacturing</span><p class="proof-title">The Glass Manufacturer That Discovered Design</p></div>
+    <div class="proof-item"><span class="proof-tag">Family Business</span><p class="proof-title">A Century-Old Manufacturer and The Estimator</p></div>
+    <div class="proof-item"><span class="proof-tag">Agri-food</span><p class="proof-title">Nine Opportunities from One Conversation</p></div>
   </div>
+  <a href="/work.html" class="tl" style="font-size:14px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:.5px;display:inline-block;margin-top:24px">See all cases &#8594;</a>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
 
-<!-- ABOUT -->
+<!-- ABOUT TEASER -->
 <section class="about fi" id="about">
   <p class="sl">Who we are</p>
   <h2 class="sh">A design-led practice built on research, rigour, and real engagement.</h2>
-  <div class="sb ab-intro"><p>Locus Design + Innovation was co-founded by Dr Manos Chatzakis and Neil Smith &#8212; bringing together hands-on design strategy with deep research into how organisations actually innovate. The practice is grounded in academic research, peer-reviewed publications, and direct engagement with businesses of every scale.</p></div>
-  <div class="ab-grid">
-    <div>
-      <div class="person-photo"><img src="manos.jpg" alt="Dr Manos Chatzakis"></div>
-      <h3 class="pname">Dr Manos Chatzakis</h3>
-      <p class="prole">Co-founder &#38; Director</p>
-      <p class="pbio">Design strategist with a PhD in design-led innovation from Northumbria University. Background in industrial product design (BA, MA). Expertise in design thinking, strategic design, co-creation, and visual tools for mapping complexity. Based in Chania, Crete.</p>
-    </div>
-    <div>
-      <div class="person-photo"><img src="neil.jpeg" alt="Neil Smith"></div>
-      <h3 class="pname">Neil Smith</h3>
-      <p class="prole">Co-founder &#38; Director</p>
-      <p class="pbio">Design-led innovation practitioner with extensive experience in organisational behaviour, co-creation facilitation, and building innovation capabilities. Specialist in understanding what blocks or enables creative work &#8212; and designing the conditions for it to thrive. Based in the UK.</p>
-    </div>
-  </div>
-  <div class="net"><h3>Extended Network</h3><p>Locus works with a curated network of specialist collaborators &#8212; researchers, facilitators, designers, and sector experts &#8212; assembled to match the specific needs of each engagement. We scale the team to the challenge, not the other way around.</p></div>
+  <div class="sb"><p>Co-founded by Dr Manos Chatzakis and Neil Smith &#8212; bringing together hands-on design strategy with deep research into how organisations actually innovate.</p></div>
+  <a href="/about.html" class="tl" style="font-size:14px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:.5px;display:inline-block;margin-top:8px">Meet the team &#8594;</a>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
