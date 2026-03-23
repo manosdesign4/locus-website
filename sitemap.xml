@@ -110,4 +110,100 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- service-transform -->
+  <url>
+    <loc>https://locus-consulting.com/service-transform.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-transform.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-transform_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-transform_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-transform_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-transform.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- service-newbiz -->
+  <url>
+    <loc>https://locus-consulting.com/service-newbiz.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-newbiz.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-newbiz_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-newbiz_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-newbiz_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-newbiz.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- service-cx -->
+  <url>
+    <loc>https://locus-consulting.com/service-cx.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-cx.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-cx_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-cx_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-cx_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-cx.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- service-creative -->
+  <url>
+    <loc>https://locus-consulting.com/service-creative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-creative.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-creative_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-creative_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-creative_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-creative.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- service-products -->
+  <url>
+    <loc>https://locus-consulting.com/service-products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-products.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-products_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-products_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-products_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-products.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- service-visibility -->
+  <url>
+    <loc>https://locus-consulting.com/service-visibility.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-visibility.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-visibility_gr.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/service-visibility_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/service-visibility_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/service-visibility.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
