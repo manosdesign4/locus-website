@@ -149,6 +149,19 @@
     .btn:hover{background:#1E92BD;transform:translateY(-1px)}
 
 
+
+    /* CLICK INDICATORS */
+    .sc-content{position:relative;padding-right:40px}
+    .sc-content::after{content:'\2192';position:absolute;bottom:24px;right:20px;font-size:16px;color:var(--mid);transition:all .3s ease;font-weight:300}
+    .sc:hover .sc-content::after{color:var(--sky);transform:translateX(4px)}
+    .proof-item::after{content:'\2192';font-size:15px;color:var(--mid);margin-left:auto;padding-left:16px;flex-shrink:0;transition:all .3s ease}
+    .proof-item:hover::after{color:var(--sky);transform:translateX(4px)}
+    .proof-item:hover .proof-title{color:var(--sky)}
+    .tc{position:relative}
+    .tc .tl::after{content:'';display:inline-block;transition:transform .3s ease}
+    .tc:hover .tl{color:var(--sky)}
+    .tc:hover .tl::after{transform:translateX(4px)}
+
     /* APPROACH TEASER */
     .approach-teaser{background:var(--light)}
 
@@ -342,7 +355,7 @@
 <!-- APPROACH TEASER -->
 <section class="approach-teaser fi">
   <p class="sl">Η προσέγγισή μας</p>
-  <h2 class="sh">Από την πλαισίωση στη δράση.<span class="sh-blue"> Σχεδιάζουμε</span> όλη τη διαδρομή.</h2>
+  <h2 class="sh">Από την πλαισίωση (framing) στη δράση.<br><span class="sh-blue">Σχεδιάζουμε</span> όλη τη διαδρομή.</h2>
   <div class="sb">
     <p>Η διαδικασία που εφαρμόζουμε προσαρμόζει το Double Diamond του Design Council, UK σε αυτό που ονομάζουμε Design Funnel &#8212; ένα μοντέλο που αντικατοπτρίζει πώς πραγματικά εκτυλίσσεται η δημιουργία στρατηγικής μέσω σχεδιασμού. Αυτή η διαδικασία συγκεντρώνει πολλή ενέργεια στα αρχικά στάδια: αποδόμηση μίας κατάστασης, ανάδυση υποθέσεων και πλαισίωση των σωστών ερωτημάτων.</p>
   </div>
@@ -357,7 +370,7 @@
 <!-- SERVICES -->
 <section class="services fi" id="services">
   <p class="sl">Τι κάνουμε</p>
-  <h2 class="sh" style="white-space:nowrap">Έξι βασικές περιοχές.<br> <span class="sh-blue">Μία σχεδιαστική προσέγγιση.</span></h2>
+  <h2 class="sh" style="white-space:nowrap">Έξι βασικές περιοχές. Μία σχεδιαστική προσέγγιση.</h2>
   <div class="sg">
     <a href="/service-transform_gr.html" class="sc"><div class="sc-img"><img src="svc-transform_gr.png" alt="Μετασχηματισμός Υφιστάμενων Επιχειρήσεων"></div><div class="sc-content"><h3 class="sn">Μετασχηματισμός Υφιστάμενων Επιχειρήσεων</h3><p class="st">Όταν η επιχείρηση λειτουργεί &#8212; αλλά δεν μεγαλώνει.</p></div></a>
     <a href="/service-newbiz_gr.html" class="sc"><div class="sc-img"><img src="svc-newbiz_gr.png" alt="Νέα Επιχειρηματικά Μοντέλα"></div><div class="sc-content"><h3 class="sn">Νέα Επιχειρηματικά Μοντέλα</h3><p class="st">Όταν η ιδέα είναι δυνατή &#8212; αλλά η δομή δεν υπάρχει.</p></div></a>
@@ -375,8 +388,8 @@
   <p class="sl">Η δουλειά μας</p>
   <h2 class="sh">Επιλεγμένες προκλήσεις στις οποίες βοηθήσαμε.</h2>
   <div class="proof-list">
-    <a href="/work_gr.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Βιομηχανία</span><p class="proof-title" style="font-weight:600">Ο Κατασκευαστής Συστημάτων Υαλοπινάκων που Ανακάλυψε τον Σχεδιασμό</p></a>
-    <a href="/work_gr.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Οικογενειακή</span><p class="proof-title" style="font-weight:600">Ένας Αιωνόβιος Κατασκευαστής και «Ο Εκτιμητής»</p></a>
+    <a href="/work_gr.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Βιομηχανία (Manufacturing SME) </span><p class="proof-title" style="font-weight:600">Ο Κατασκευαστής Συστημάτων Υαλοπινάκων που Ανακάλυψε τον Σχεδιασμό</p></a>
+    <a href="/work_gr.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Οικογενειακή (Family SME) </span><p class="proof-title" style="font-weight:600">Ένας Αιωνόβιος Κατασκευαστής και «Ο Εκτιμητής»</p></a>
     <a href="/work_gr.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Αγρο-διατροφή</span><p class="proof-title" style="font-weight:600">Εννέα Ευκαιρίες από μία Δημιουργική Στρατηγική Συνεδρία </p></a>
   </div>
   <a href="/work_gr.html" class="tl" style="font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:1.5px;display:inline-block;margin-top:24px;text-transform:uppercase">Δείτε όλες τις προκλήσεις &#8594;</a>
@@ -387,7 +400,8 @@
 <!-- ABOUT TEASER -->
 <section class="about fi" id="about">
   <p class="sl">Ποιοι είμαστε</p>
-  <h2 class="sh">Ένα γραφείο Στρατηγικής Συμβουλευτικής βασισμένη σε δημιουργικές πρακτικές σχεδιασμού καινοτομίας (design-led innovation).</h2>
+  <h2 class="sh">Μια πρακτική σχεδιασμού χτισμένη πάνω σε έρευνα, σχολαστικότητα και πραγματική εμπλοκή.</h2>
+  <div class="sb"><p>Συνιδρύθηκε από τον Δρ. Μάνο Χατζάκη και τον Neil Smith &#8212; συνδυάζοντας πρακτική στρατηγικού σχεδιασμού με βαθιά έρευνα στον τρόπο που οι οργανισμοί πραγματικά καινοτομούν.</p></div>
   <a href="/about_gr.html" class="tl" style="font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:1.5px;display:inline-block;margin-top:8px;text-transform:uppercase">Γνωρίστε την ομάδα &#8594;</a>
 </section>
 
@@ -402,6 +416,7 @@
     <div class="tc"><p class="tt">Οργανισμοί</p><h3 class="th">Το Οργανόγραμμά σου, σου λέει ψέματα</h3><p class="te">Σε πολλές επιχειρήσεις που συνεργαστήκαμε, τα άτομα που κάνουν τα πράγματα να λειτουργούν, δεν ταιριάζουν με τον επίσημο ρόλο τους.</p><a href="/article-org-chart-gr.html" class="tl">Διαβάστε &#8594;</a></div>
     <div class="tc"><p class="tt">Μέθοδος</p><h3 class="th">Front-Loading: Γιατί η αργή αρχή μπορείς να σε προχωρήσει μπροστά πιο γρήγορα</h3><p class="te">Το αντι-διαισθητικό εύρημα ότι η δυσανάλογη επένδυση χρόνου στην αποδόμηση και κατανόηση μίας δύσκολης κατάστασης παράγει δραματικά καλύτερα αποτελέσματα.</p><a href="/article-front-loading-gr.html" class="tl">Διαβάστε &#8594;</a></div>
   </div>
+  <a href="/about_gr.html#publications" class="tl" style="font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:1.5px;display:inline-block;margin-top:24px;text-transform:uppercase">Δείτε τις δημοσιεύσεις μας &#8594;</a>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
