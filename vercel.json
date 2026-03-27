@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/((?!maintenance.html).*)", "destination": "/maintenance.html", "statusCode": 302 }
+    { "source": "/((?!maintenance.html|.*\\.png|.*\\.ico|.*\\.jpg|.*\\.jpeg|.*\\.svg|.*\\.css|.*\\.js).*)", "destination": "/maintenance.html", "statusCode": 302 }
   ]
 }
