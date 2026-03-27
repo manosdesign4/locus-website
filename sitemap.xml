@@ -206,4 +206,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- our-thinking -->
+  <url>
+    <loc>https://locus-consulting.com/our-thinking.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/our-thinking.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/our-thinking_gr.html"/>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://locus-consulting.com/our-thinking_gr.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://locus-consulting.com/our-thinking_gr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://locus-consulting.com/our-thinking.html"/>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
