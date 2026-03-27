@@ -16,22 +16,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Η Δουλειά μας &#8212; Locus Design + Innovation</title>
-  <meta name="description" content="Η δουλειά μας από την πρακτική μας. Κάθε project ξεκινά με μια κατάσταση που χρειάζεται σαφήνεια και τελειώνει με σχεδιασμένες λύσεις.">
+  <meta name="description" content="Η δουλειά μας from our practice. Every engagement begins with a situation that needs clarity and ends with designed solutions. Manufacturing, family business, public sector, agri-food, F&B.">
 
   <!-- Canonical & Language -->
   <link rel="canonical" href="https://locus-consulting.com/work_gr.html">
+  <link rel="alternate" hreflang="en" href="https://locus-consulting.com/work_gr.html">
   <link rel="alternate" hreflang="el" href="https://locus-consulting.com/work_gr.html">
-  <link rel="alternate" hreflang="en" href="https://locus-consulting.com/work.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Η Δουλειά μας &#8212; Locus Design + Innovation">
-  <meta property="og:description" content="Επιλεγμένες προκλήσεις από την πρακτική μας.">
-  <meta property="og:url" content="https://locus-consulting.com/work_gr.html">
+  <meta property="og:title" content="Our Work — Locus Design + Innovation">
+  <meta property="og:description" content="Selected challenges from our practice. Design-led strategy in manufacturing, family business, public sector, and more.">
+  <meta property="og:url" content="https://locus-consulting.com/work.html">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="el_GR">
-  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="el_GR">
   <meta property="og:site_name" content="Locus Design + Innovation">
   <meta property="og:image" content="https://locus-consulting.com/logo_grey-blue.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Our Work — Locus Design + Innovation">
+  <meta name="twitter:description" content="Selected challenges from our design-led strategy practice.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +48,7 @@
     html{scroll-behavior:smooth;overflow-x:hidden}
     body{font-family:var(--sans);color:var(--txt);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
+    /* NAV */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04);backdrop-filter:blur(14px)}
     .nav-left{display:flex;align-items:center}
     .nav-logo{display:flex;align-items:center;text-decoration:none}
@@ -58,19 +64,23 @@
     .nav-mob{display:none;cursor:pointer;font-size:22px;color:var(--charcoal);background:none;border:none;padding:4px}
     .nav-mm{display:none}
 
+    /* SHARED */
     section{padding:80px 48px}
     .sl{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
     .sh{font-family:var(--serif);font-size:clamp(28px,4.2vw,52px);line-height:1.15;color:var(--charcoal);max-width:760px;margin-bottom:24px}
     .sb{font-size:17px;line-height:1.75;color:var(--txt-l);max-width:620px}
 
+    /* SEPARATORS */
     .sep{text-align:center;padding:20px 48px;opacity:.15}
     .sep img{height:112px;width:auto;display:block;margin:0 auto}
 
+    /* PAGE HERO */
     .page-hero{padding:140px 48px 64px;background:var(--light)}
     .page-hero .sl{margin-bottom:16px}
     .page-hero .sh{margin-bottom:16px}
     .page-hero .sb{max-width:640px}
 
+    /* CHALLENGES */
     .challenges{background:var(--white)}
     .cg-grid{margin-top:40px;max-width:840px}
     .ch{padding:32px 0;border-bottom:1px solid rgba(0,0,0,.06)}
@@ -82,6 +92,7 @@
     .ch-det h4{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--charcoal);margin-bottom:6px}
     .ch-det p{font-size:13.5px;color:var(--txt-l);line-height:1.6}
 
+    /* CTA BAND */
     .cta-band{background:var(--charcoal);color:var(--white);text-align:center;padding:72px 48px}
     .cta-band .sl{color:rgba(255,255,255,.3)}
     .cta-band .sh{color:var(--white);margin:0 auto 20px}
@@ -89,38 +100,55 @@
     .btn{display:inline-block;padding:15px 44px;background:var(--sky);color:var(--white);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:.3s}
     .btn:hover{background:#1E92BD;transform:translateY(-1px)}
 
+    /* FOOTER */
     .ft{background:#1a1a1a;color:rgba(255,255,255,.28);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
     .ft-links{display:flex;gap:24px}
     .ft-links a{color:rgba(255,255,255,.28);text-decoration:none;font-size:12px;transition:.2s}
     .ft-links a:hover{color:var(--sky)}
 
+    /* RESPONSIVE */
     @media(max-width:1024px){
-      .nav{padding:12px 32px}.nav-links{gap:20px}.nav-links a{font-size:11px}
-      section{padding:64px 32px}.page-hero{padding:120px 32px 56px}
+      .nav{padding:12px 32px}
+      .nav-links{gap:20px}
+      .nav-links a{font-size:11px}
+      section{padding:64px 32px}
+      .page-hero{padding:120px 32px 56px}
     }
     @media(max-width:768px){
-      .nav{padding:10px 20px}.nav-links{display:none}.nav-mob{display:block}
-      .nav-logo img{height:40px}.lang-switch{margin-left:0}.nav-right{gap:12px}
+      .nav{padding:10px 20px}
+      .nav-links{display:none}
+      .nav-mob{display:block}
+      .nav-logo img{height:40px}
+      .lang-switch{margin-left:0}
+      .nav-right{gap:12px}
       .nav-mm.active{display:flex;flex-direction:column;gap:16px;position:fixed;top:60px;left:0;right:0;background:var(--white);padding:24px 20px;border-bottom:1px solid var(--mid);z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.1)}
       .nav-mm a{font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none}
-      section{padding:56px 20px}.page-hero{padding:100px 20px 48px}
-      .sh{font-size:clamp(24px,6vw,36px);max-width:100%}.sb{font-size:15px;max-width:100%}
-      .sep{padding:12px 20px}.sep img{height:72px}
+      section{padding:56px 20px}
+      .page-hero{padding:100px 20px 48px}
+      .sh{font-size:clamp(24px,6vw,36px);max-width:100%}
+      .sb{font-size:15px;max-width:100%}
+      .sep{padding:12px 20px}
+      .sep img{height:72px}
       .ch-det{grid-template-columns:1fr}
       .ft{flex-direction:column;gap:12px;text-align:center;padding:24px 20px}
       .cta-band{padding:56px 20px}
     }
     @media(max-width:480px){
-      .nav-logo img{height:32px}section{padding:48px 16px}
-      .page-hero{padding:90px 16px 40px}.sep{padding:8px 16px}.sep img{height:56px}
+      .nav-logo img{height:32px}
+      section{padding:48px 16px}
+      .page-hero{padding:90px 16px 40px}
+      .sep{padding:8px 16px}
+      .sep img{height:56px}
     }
 
+    /* FADE-IN */
     .fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
     .fi.vis{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="nav-left">
     <a href="/index_gr.html" class="nav-logo">
@@ -131,49 +159,52 @@
     <div class="nav-links">
       <a href="/index_gr.html#services">Υπηρεσίες</a>
       <a href="/approach_gr.html">Προσέγγιση</a>
-      <a href="/work_gr.html" class="active">Προκλήσεις</a>
+      <a href="/work_gr.html" class="active">Cases</a>
       <a href="/our-thinking_gr.html">Σκέψεις</a>
       <a href="/about_gr.html">Ποιοι είμαστε</a>
       <a href="/index_gr.html#contact">Επικοινωνία</a>
     </div>
     <div class="lang-switch">
-      <a href="/work.html" title="English">EN</a>
+      <a href="/work_gr.html" title="English">EN</a>
       <a href="#" class="active" title="Ellinika">GR</a>
     </div>
-    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">☰</button>
+    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
   </div>
     <div class="nav-mm">
     <a href="/index_gr.html#services" onclick="this.parentElement.classList.remove('active')">Υπηρεσίες</a>
-    <a href="/approach_gr.html" onclick="this.parentElement.classList.remove('active')">Προσέγγιση</a>
-    <a href="/work_gr.html" onclick="this.parentElement.classList.remove('active')">Προκλήσεις</a>
-    <a href="/our-thinking_gr.html" onclick="this.parentElement.classList.remove('active')">Σκέψεις</a>
-    <a href="/about_gr.html" onclick="this.parentElement.classList.remove('active')">Ποιοι είμαστε</a>
+    <a href="/approach_gr.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
+    <a href="/work_gr.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
+    <a href="/our-thinking_gr.html" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
+    <a href="/about_gr.html" onclick="this.parentElement.classList.remove('active')">About</a>
     <a href="/index_gr.html#contact" onclick="this.parentElement.classList.remove('active')">Επικοινωνία</a>
   </div>
 </nav>
 
+<!-- PAGE HERO -->
 <section class="page-hero">
   <p class="sl">Επιλεγμένες προκλήσεις από την πρακτική μας. Κάθε project ξεκινά με μια κατάσταση που χρειάζεται σαφήνεια και τελειώνει με σχεδιασμένες λύσεις.</p>
-  <h2 class="sh">Επιλεγμένες προκλήσεις</h2>
+  <h2 class="sh">Selected challenges</h2>
   <div class="sb">
-    <p>Επιλεγμένες προκλήσεις</p>
+    <p>Every engagement begins with a situation that needs clarity &#8212; and ends with designed solutions. Here are some of the challenges we&#8217;ve helped navigate.</p>
   </div>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
 
+<!-- CHALLENGES -->
 <section class="challenges fi">
   <div class="cg-grid">
-    <div class="ch"><p class="ch-tag">Κάθε project ξεκινά με μια κατάσταση που χρειάζεται σαφήνεια &#8212; και τελειώνει με σχεδιασμένες λύσεις. Παρακάτω μπορείτε να διαβάσετε ορισμένες από τις προκλήσεις στις οποίες βοηθήσαμε.</p><h3 class="ch-title">F&B · Σχεδιασμός Εμπειρίας</h3><p class="ch-sit">Εμπειρία Πριν το Άνοιγμα</p><div class="ch-det"><div><h4>Προσέγγιση</h4><p>Ένα νέο F&B εγχείρημα είχε ισχυρό concept προϊόντος αλλά δεν είχε σχεδιάσει την εμπειρία πελάτη.</p></div><div><h4>Τι προέκυψε</h4><p>Χαρτογράφηση διαδικασιών με εξειδικευμένα οπτικά εργαλεία, συνεντεύξεις σε όλα τα επίπεδα, ανάδειξη κρυφών πρακτικών καινοτομίας.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Βιομηχανία &#183; Σχεδιαστικός Μετασχηματισμός</p><h3 class="ch-title">Ένας Αιωνόβιος Κατασκευαστής και &#171;Ο Εκτιμητής&#187;</h3><p class="ch-sit">Ένας εξειδικευμένος κατασκευαστής χρειάστηκε να μεταβεί από μια νοοτροπία επικεντρωμένη αποκλειστικά στην παραγωγή (production-led) σε μια προσέγγιση με επίκεντρο τον σχεδιασμό και τον πελάτη (design-led, customer-centred). Η ανάπτυξη προϊόντων ήταν ad-hoc και εξαρτώταν από λίγα βασικά άτομα, καθιστώντας απαραίτητη τη συστηματοποίηση των διαδικασιών.</p><div class="ch-det"><div><h4>Προσέγγιση</h4><p>Ένας οπτικός χάρτης της πραγματικής διαδικασίας καινοτομίας τους &#8212; αποκαλύπτοντας ότι είχαν ασυνείδητα αναθέσει σε τρίτους (outsourced) μια κρίσιμη ικανότητα. Αυτή η διαδικασία πυροδότησε μια στρατηγική επαναξιολόγηση των συνεργασιών τους.</p></div><div><h4>Τι προέκυψε</h4><p>Ο &#171;Εκτιμητής&#187; αποκαλύφθηκε ως ο κεντρικός μεσολαβητής καινοτομίας &#8212; αναδιαμορφώνοντας θεμελιωδώς τον τρόπο που η εταιρεία κατανοούσε τις ίδιες της τις δυνατότητες.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Οικογενειακή Επιχείρηση &#183; Διαδοχή Γενεών</p><h3 class="ch-title">Ένας Αιωνόβιος Κατασκευαστής και «Ο Εκτιμητής»</h3><p class="ch-sit">Ένας κατασκευαστής με ιστορία 100+ ετών βρισκόταν σε διαδοχή γενεών. Ένα βασικό πρόσωπο κατείχε κρίσιμη γνώση που δεν εμφανιζόταν σε κανένα οργανόγραμμα.</p><div class="ch-det"><div><h4>Προσέγγιση</h4><p>Ο «Εκτιμητής» αποκαλύφθηκε ως ο κεντρικός μεσολαβητής καινοτομίας &#8212; αναδιαμορφώνοντας θεμελιωδώς τον τρόπο που η εταιρεία κατανοούσε τις ίδιες της τις δυνατότητες.</p></div><div><h4>Τι προέκυψε</h4><p>Τρία πρακτικά πλαίσια πρόκλησης &#8212; αντικαθιστώντας ένα &#171;χαοτικό πρόβλημα&#187; (wicked problem) σε τρία συγκεκριμένα σχεδιαστικά αιτήματα (design briefs) για να δράσουν τα ενδιαφερόμενα μέρη.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Δημόσιος Τομέας &#183; Σύνθετο Πρόβλημα</p><h3 class="ch-title">Από Σύνθετο Πρόβλημα σε Ξεκάθαρο Πλαίσιο Σχεδιασμού</h3><p class="ch-sit">Ένας οργανισμός του δημόσιου τομέα είχε δοκιμάσει πολλαπλές προσεγγίσεις σε ένα σύνθετο κοινωνικό πρόβλημα χωρίς αποτέλεσμα.</p><div class="ch-det"><div><h4>Προσέγγιση</h4><p>Τρία πρακτικά πλαίσια πρόκλησης &#8212; αντικαθιστώντας ένα «χαοτικό πρόβλημα» (wicked problem) σε τρία συγκεκριμένα σχεδιαστικά αιτήματα (design briefs) για να δράσουν τα ενδιαφερόμενα μέρη.</p></div><div><h4>Τι προέκυψε</h4><p>Χαρτογράφηση επιχειρηματικής κατάστασης, αναγνώριση ευκαιριών, στρατηγική πλαισίωση &#8212; όλα μέσα σε μία δομημένη συνεδρία.</p></div></div></div>
-    <div class="ch"><p class="ch-tag">Αγρο-διατροφή &#183; Στρατηγική Ευκαιρία</p><h3 class="ch-title">Εννέα Ευκαιρίες από Μία Στρατηγική Συνεδρία</h3><p class="ch-sit">Μια κρητική αγροδιατροφική επιχείρηση ήθελε να αναπτυχθεί αλλά δεν μπορούσε να δει πέρα από τις τρέχουσες λειτουργίες της.</p><div class="ch-det"><div><h4>Προσέγγιση</h4><p>Εννέα διακριτές επιχειρηματικές ευκαιρίες &#8212; δίνοντας στους ιδιοκτήτες ένα χαρτοφυλάκιο στρατηγικών επιλογών αντί για μία μόνο διαδρομή.</p></div><div><h4>Τι προέκυψε</h4><p>Εφαρμογή αρχών service design, experience mapping (χαρτογράφηση εμπειρίας), touchpoint design (σχεδιασμός σημείων επαφής) &#8212; πριν από το άνοιγμα της επιχείρησης διασφαλίζοντας μια ολιστική, ανθρωποκεντρική προσέγγιση.</p></div></div></div>
+    <div class="ch"><p class="ch-tag">Κάθε project ξεκινά με μια κατάσταση που χρειάζεται σαφήνεια &#8212; και τελειώνει με σχεδιασμένες λύσεις. Παρακάτω μπορείτε να διαβάσετε ορισμένες από τις προκλήσεις στις οποίες βοηθήσαμε.</p><h3 class="ch-title">F&#38;B &#183; Σχεδιασμός Εμπειρίας</h3><p class="ch-sit">Εμπειρία Πριν το Άνοιγμα</p><div class="ch-det"><div><h4>Approach</h4><p>Ένα νέο F&#38;B εγχείρημα είχε ισχυρό concept προϊόντος αλλά δεν είχε σχεδιάσει την εμπειρία πελάτη.</p></div><div><h4>What emerged</h4><p>Χαρτογράφηση διαδικασιών με εξειδικευμένα οπτικά εργαλεία, συνεντεύξεις σε όλα τα επίπεδα, ανάδειξη κρυφών πρακτικών καινοτομίας.</p></div></div></div>
+    <div class="ch"><p class="ch-tag">Βιομηχανία &#183; Σχεδιαστικός Μετασχηματισμός</p><h3 class="ch-title">Ο Κατασκευαστής Συστημάτων Υαλοπινάκων που Ανακάλυψε τον Σχεδιασμό</h3><p class="ch-sit">A 100+ year-old family manufacturer was navigating generational transition. A key figure &#8212; &#8220;the Estimator&#8221; &#8212; held critical knowledge that didn&#8217;t appear on any chart.</p><div class="ch-det"><div><h4>Approach</h4><p>Deep process mapping, multi-stakeholder interviews, identifying informal knowledge networks sustaining the organisation&#8217;s decision-making.</p></div><div><h4>What emerged</h4><p>The &#8220;Estimator&#8221; was revealed as the central innovation broker &#8212; fundamentally reframing how the company understood its own capabilities.</p></div></div></div>
+    <div class="ch"><p class="ch-tag">Οικογενειακή Επιχείρηση &#183; Διαδοχή Γενεών</p><h3 class="ch-title">Ένας Αιωνόβιος Κατασκευαστής και &#171;Ο Εκτιμητής&#187;</h3><p class="ch-sit">A public sector organisation had tried multiple approaches to a complex social problem and failed. Standard methods weren&#8217;t working.</p><div class="ch-det"><div><h4>Approach</h4><p>Ο &#171;Εκτιμητής&#187; αποκαλύφθηκε ως ο κεντρικός μεσολαβητής καινοτομίας &#8212; αναδιαμορφώνοντας θεμελιωδώς τον τρόπο που η εταιρεία κατανοούσε τις ίδιες της τις δυνατότητες.</p></div><div><h4>What emerged</h4><p>Three actionable challenge frames &#8212; replacing one overwhelming &#8220;wicked problem&#8221; with three design briefs teams could work on.</p></div></div></div>
+    <div class="ch"><p class="ch-tag">Δημόσιος Τομέας &#183; Σύνθετο Πρόβλημα</p><h3 class="ch-title">Από Σύνθετο Πρόβλημα σε Ξεκάθαρο Πλαίσιο Σχεδιασμού</h3><p class="ch-sit">A Cretan agricultural business wanted to grow but couldn&#8217;t see beyond its current operations.</p><div class="ch-det"><div><h4>Approach</h4><p>Τρία πρακτικά πλαίσια πρόκλησης &#8212; αντικαθιστώντας ένα &#171;χαοτικό πρόβλημα&#187; (wicked problem) σε τρία συγκεκριμένα σχεδιαστικά αιτήματα (design briefs) για να δράσουν τα ενδιαφερόμενα μέρη.</p></div><div><h4>What emerged</h4><p>Χαρτογράφηση επιχειρηματικής κατάστασης, αναγνώριση ευκαιριών, στρατηγική πλαισίωση &#8212; όλα μέσα σε μία δομημένη συνεδρία.</p></div></div></div>
+    <div class="ch"><p class="ch-tag">Αγρο-διατροφή &#183; Στρατηγική Ευκαιρία</p><h3 class="ch-title">Εννέα Ευκαιρίες από Μία Στρατηγική Συνεδρία</h3><p class="ch-sit">A new food and beverage venture had a strong product concept but hadn&#8217;t designed the customer experience.</p><div class="ch-det"><div><h4>Approach</h4><p>Εννέα διακριτές επιχειρηματικές ευκαιρίες &#8212; δίνοντας στους ιδιοκτήτες ένα χαρτοφυλάκιο στρατηγικών επιλογών αντί για μία μόνο διαδρομή.</p></div><div><h4>What emerged</h4><p>Εφαρμογή αρχών service design, experience mapping (χαρτογράφηση εμπειρίας), touchpoint design (σχεδιασμός σημείων επαφής) &#8212; πριν από το άνοιγμα της επιχείρησης διασφαλίζοντας μια ολιστική, ανθρωποκεντρική προσέγγιση.</p></div></div></div>
   </div>
 </section>
 
 <div class="sep"><img src="walking-figure.png" alt="" aria-hidden="true"></div>
 
+<!-- CTA -->
 <section class="cta-band fi">
   <p class="sl">Μια ολοκληρωμένη στρατηγική εμπειρίας &#8212; ένας σκόπιμος σχεδιασμός του πώς θα νιώθουν οι πελάτες, όχι μόνο του τι θα φάνε.</p>
   <h2 class="sh">Η δική σας πρόκληση</h2>
