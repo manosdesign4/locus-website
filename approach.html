@@ -126,6 +126,16 @@
     .ft-links a:hover{color:var(--sky)}
 
     /* RESPONSIVE */
+        /* DROPDOWN */
+    .nav-dropdown{position:relative;display:flex;align-items:center}
+    .nav-dropdown>a::after{content:'\25BE';margin-left:4px;font-size:9px;opacity:0.5;transition:transform .2s}
+    .nav-dropdown:hover>a::after{transform:rotate(180deg)}
+    .dropdown-menu{position:absolute;top:100%;left:-16px;min-width:260px;padding:14px 0;background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,.1);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:200}
+    .nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:var(--txt-l)!important;text-decoration:none;transition:background .15s,color .15s}
+    .dropdown-menu a:hover{background:var(--light);color:var(--charcoal)!important}
+    .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
+    .nav-mm .svc-sub{padding-left:16px;display:flex;flex-direction:column;gap:10px;margin-top:8px;margin-bottom:8px}.nav-mm .svc-sub a{font-size:13px!important;font-weight:400!important;color:var(--txt-l)!important;display:flex;align-items:center;gap:8px;text-decoration:none}.nav-mm .svc-sub .svc-dot{width:6px;height:6px;min-width:6px;border-radius:50%}
     @media(max-width:1024px){
       .nav{padding:12px 32px}
       .nav-links{gap:20px}
@@ -183,7 +193,18 @@
   </div>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="/#services">Services</a>
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/service-transform.html"><span class="svc-dot" style="background:#CEB189"></span>Business Transformation</a>
+          <a href="/service-newbiz.html"><span class="svc-dot" style="background:#26AADB"></span>New Business Models</a>
+          <a href="/service-cx.html"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
+          <a href="/service-creative.html"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
+          <a href="/service-products.html"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
+          <a href="/service-visibility.html"><span class="svc-dot" style="background:#ED6B6B"></span>Strategic Marketing</a>
+        </div>
+      </div>
       <a href="/approach.html" class="active">How We Work</a>
       <a href="/work.html">Cases</a>
       <a href="/our-thinking.html">Our Thinking</a>
@@ -197,7 +218,16 @@
     <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
   </div>
     <div class="nav-mm">
+    <a href="/" onclick="this.parentElement.classList.remove('active')">Home</a>
     <a href="/#services" onclick="this.parentElement.classList.remove('active')">Services</a>
+    <div class="svc-sub">
+      <a href="/service-transform.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#CEB189"></span>Business Transformation</a>
+      <a href="/service-newbiz.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#26AADB"></span>New Business Models</a>
+      <a href="/service-cx.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
+      <a href="/service-creative.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
+      <a href="/service-products.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
+      <a href="/service-visibility.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#ED6B6B"></span>Strategic Marketing</a>
+    </div>
     <a href="/approach.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
     <a href="/work.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
     <a href="/our-thinking.html" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>

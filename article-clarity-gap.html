@@ -286,6 +286,15 @@
     footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
     footer a:hover { color: rgba(255,255,255,0.9); }
 
+        /* DROPDOWN */
+    .nav-dropdown{position:relative;display:flex;align-items:center}
+    .nav-dropdown>a::after{content:'\25BE';margin-left:4px;font-size:9px;opacity:0.5;transition:transform .2s}
+    .nav-dropdown:hover>a::after{transform:rotate(180deg)}
+    .dropdown-menu{position:absolute;top:100%;left:-16px;min-width:260px;padding:14px 0;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,.1);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:200;list-style:none}
+    .nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:#6B6B6B!important;text-decoration:none;transition:background .15s,color .15s}
+    .dropdown-menu a:hover{background:#F5F5F3;color:#1a1a1a!important}
+    .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .article-hero { padding: 3rem 1.25rem 2rem; }
@@ -301,7 +310,17 @@
       <img src="/logo_grey-blue.png" alt="Locus Design + Innovation" />
     </a>
     <ul class="nav-links">
-      <li><a href="/#services">Services</a></li>
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown"><a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/service-transform.html"><span class="svc-dot" style="background:#CEB189"></span>Business Transformation</a>
+          <a href="/service-newbiz.html"><span class="svc-dot" style="background:#26AADB"></span>New Business Models</a>
+          <a href="/service-cx.html"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
+          <a href="/service-creative.html"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
+          <a href="/service-products.html"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
+          <a href="/service-visibility.html"><span class="svc-dot" style="background:#ED6B6B"></span>Strategic Marketing</a>
+        </div>
+      </li>
       <li><a href="/approach.html">How We Work</a></li>
       <li><a href="/work.html">Cases</a></li>
       <li><a href="/our-thinking.html">Our Thinking</a></li>
