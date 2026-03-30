@@ -74,7 +74,7 @@
     section{padding:80px 48px}
     .sl{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
     .sh{font-family:var(--serif);font-size:clamp(28px,4.2vw,52px);line-height:1.15;color:var(--charcoal);max-width:760px;margin-bottom:24px}
-    .sb{font-size:17px;line-height:1.75;color:var(--txt-l);max-width:620px}
+    .sb{font-size:17px;line-height:1.75;color:var(--txt-l);max-width:620px;text-align:justify;word-spacing:-0.5px;hyphens:auto;-webkit-hyphens:auto}
     .sb p+p{margin-top:16px}
 
     /* SEPARATORS */
@@ -92,7 +92,7 @@
     .hero-c .sl{color:var(--sky)}
     .hero-h{font-family:var(--serif);font-size:clamp(40px,6.5vw,80px);line-height:1.08;color:var(--white);margin-bottom:28px}
     .hero-h em{font-style:italic;color:var(--sky)}
-    .hero-sub{font-size:18px;line-height:1.75;color:rgba(255,255,255,.62);max-width:520px;font-weight:300}
+    .hero-sub{font-size:18px;line-height:1.75;color:rgba(255,255,255,.62);max-width:520px;font-weight:300;text-align:justify;word-spacing:-0.5px}
     .hero-scroll{position:absolute;bottom:32px;left:48px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.22);z-index:2;animation:pulse 2.5s ease-in-out infinite}
     @keyframes pulse{0%,100%{opacity:.15}50%{opacity:.45}}
 
@@ -331,7 +331,7 @@
     <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
     <a href="/approach.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
     <a href="/work.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
-    <a href="#thinking" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
+    <a href="/our-thinking.html" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
     <a href="/about.html" onclick="this.parentElement.classList.remove('active')">About</a>
     <a href="#contact" onclick="this.parentElement.classList.remove('active')">Contact</a>
   </div>
@@ -356,7 +356,7 @@
   <h2 class="sh">Most businesses don&#8217;t lack effort.<span class="sh-blue"> They lack clarity.</span></h2>
   <div class="sb">
     <p>You run but you don&#8217;t grow. You are busy but not directed. Decisions get made reactively, not strategically. The common thread isn&#8217;t a lack of resources, talent, or ambition &#8212; it&#8217;s the absence of strategic clarity.</p>
-    <p>We call this <span class="cg-text">The Clarity Gap</span>. Locus exists to close it &#8212; through design-led sensemaking, strategy, and the creation of real solutions.</p>
+    <p>We call this <a href="/article-clarity-gap.html" style="text-decoration:none"><span class="cg-text">The Clarity Gap</span></a>. Locus exists to close it &#8212; through design-led sensemaking, strategy, and the creation of real solutions.</p>
   </div>
 </section>
 
@@ -378,7 +378,7 @@
 <!-- SERVICES -->
 <section class="services fi" id="services">
   <p class="sl">What we do</p>
-  <h2 class="sh" style="white-space:nowrap">Six territories. One design-led approach.</h2>
+  <h2 class="sh" style="white-space:nowrap">Six territories. One <span class="sh-blue">design-led</span> approach.</h2>
   <div class="sg">
     <a href="/service-transform.html" class="sc"><div class="sc-img"><img src="svc-transform.png" alt="Business Transformation"></div><div class="sc-content"><h3 class="sn">Business Transformation</h3><p class="st">When the business works &#8212; but doesn&#8217;t grow.</p></div></a>
     <a href="/service-newbiz.html" class="sc"><div class="sc-img"><img src="svc-newbiz.png" alt="New Business Models"></div><div class="sc-content"><h3 class="sn">New Business Models</h3><p class="st">When the idea is strong &#8212; but the architecture isn&#8217;t.</p></div></a>
@@ -394,7 +394,7 @@
 <!-- PROOF STRIP -->
 <section class="proof fi" id="work">
   <p class="sl">Our work</p>
-  <h2 class="sh">Selected challenges<br>we&#8217;ve helped navigate.</h2>
+  <h2 class="sh">Selected <span class="sh-blue">challenges</span><br>we&#8217;ve helped navigate.</h2>
   <div class="proof-list">
     <a href="/work.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Manufacturing</span><p class="proof-title" style="font-weight:600">The Glass Manufacturer That Discovered Design</p></a>
     <a href="/work.html" class="proof-item" style="text-decoration:none;color:inherit"><span class="proof-tag">Family Business</span><p class="proof-title" style="font-weight:600">A Century-Old Manufacturer and The Estimator</p></a>
@@ -406,7 +406,7 @@
 <!-- ABOUT TEASER -->
 <section class="about fi" id="about">
   <p class="sl">Who we are</p>
-  <h2 class="sh">A design-led practice built on research, rigour, and real engagement.</h2>
+  <h2 class="sh">A design-led practice built on <span class="sh-blue">research</span>, <span class="sh-blue">rigour</span>, and real <span class="sh-blue">engagement</span>.</h2>
   <div class="sb"><p>Co-founded by Dr Manos Chatzakis and Neil Smith &#8212; bringing together hands-on design strategy with deep research into how organisations actually innovate.</p></div>
   <a href="/about.html" class="tl" style="font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;letter-spacing:1.5px;display:inline-block;margin-top:8px;text-transform:uppercase">Meet the team &#8594;</a>
 </section>
@@ -416,7 +416,7 @@
 <!-- THINKING -->
 <section class="thinking fi" id="thinking">
   <p class="sl">Our thinking</p>
-  <h2 class="sh">Ideas, observations, and questions from our practice.</h2>
+  <h2 class="sh">Ideas, observations, and questions <span class="sh-blue">from our practice</span>.</h2>
   <div class="tg">
     <div class="tc"><p class="tt">Strategy</p><h3 class="th">The Clarity Gap: Why Businesses Run But Don&#8217;t Grow</h3><p class="te">An exploration of the space between intention and achievement &#8212; and why the answer isn&#8217;t more effort, more data, or more tools.</p><a href="/article-clarity-gap.html" class="tl">Read &#8594;</a></div>
     <div class="tc"><p class="tt">Organisations</p><h3 class="th">Your Org Chart Is Lying To You</h3><p class="te">In every organisation we&#8217;ve studied, the people who make things happen don&#8217;t match the structure diagram. What this means for decisions.</p><a href="/article-org-chart.html" class="tl">Read &#8594;</a></div>
@@ -435,7 +435,7 @@
     <div class="co-info">
       <p>If something here resonated &#8212; or if you have a challenge that needs clarity and action &#8212; reach out. The first step is always a conversation.</p>
       <div class="co-det">
-        <div><span>Email</span><p><a href="/cdn-cgi/l/email-protection#86eae9e5f3f5e0e9f4efe8e8e9f0e7f2efe9e8c6e1ebe7efeaa8e5e9eb">locusforinnovation&#64;gmail.com</a></p></div>
+        <div><span>Email</span><p><a href="m&#97;ilto:locusforinnovation&#64;gm&#97;il.com">locusforinnovation&#64;gmail.com</a></p></div>
         <div><span>WhatsApp</span><p><a href="https://wa.me/306944800352">+30 6944 800 352</a></p></div>
         <div><span>Location</span><p>Meletiou Piga 17, Chania, Crete &#183; United Kingdom</p></div>
       </div>
@@ -477,7 +477,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   var nav = document.getElementById('mainNav');
   window.addEventListener('scroll', function() {
     if (window.scrollY > 80) { nav.classList.add('scrolled'); }
