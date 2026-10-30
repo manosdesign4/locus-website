@@ -15,6 +15,8 @@ Read this file fully before any task. If a request conflicts with a rule here, s
 - **Greek text needs approval.** Any new or rewritten Greek copy (meta descriptions, alt text, headings, body) must be listed for Manos to review before commit. Never machine-translate without flagging it.
 - **Preview before approval.** Open changed pages locally and check at **desktop (1440px) and mobile (390px)**.
 - **Don't touch what wasn't asked.** No opportunistic refactors, renames, or "improvements" outside the task scope. Report them as suggestions instead.
+- **No AI or tool attribution anywhere in the site.** Never write "Claude", "Claude Code", "Anthropic", "AI-generated", "generated with" or similar into any site file: HTML, CSS, JS, comments, meta tags (no `generator` meta), alt text, file names, `sitemap.xml`, `robots.txt`, or asset metadata. The same applies to commit messages and PR descriptions: no "Generated with Claude Code" lines and no `Co-Authored-By: Claude` trailers. Write commit messages as plain descriptions of the change. Before any commit, search changed files for these terms and remove them.
+- **This file is never deployed.** `CLAUDE.md` is excluded from Vercel via `.vercelignore`. Never link to it, and never remove it from `.vercelignore`.
 
 ## 2. Design skill routing
 
