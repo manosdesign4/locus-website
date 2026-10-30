@@ -124,7 +124,7 @@ Entity consistency: "Locus" collides with other companies (Locus Robotics, Locus
 - **Name:** Locus Design + Innovation
 - **Address:** Μελετίου Πηγά 17, Χανιά, Κρήτη (EN: Meletiou Piga 17, Chania, Crete)
 - **Phone/WhatsApp:** +30 6944 800 352
-- **Email:** currently `locusforinnovation@gmail.com`. A switch to a domain address is planned; **confirm with Manos before changing.** Email must be plain crawlable text, not entity-obfuscated.
+- **Email:** `hello@locus-consulting.com`. Must be plain crawlable text, not entity-obfuscated.
 
 Structured data (JSON-LD, in `<head>`):
 - Homepages: `ProfessionalService` (+ `Organization`) with NAP, geo, areaServed, `founder` → `Person`, and `sameAs` (Instagram, Facebook, LinkedIn company + personal, Google Business Profile)
