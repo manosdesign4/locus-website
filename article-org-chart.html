@@ -291,23 +291,44 @@
     .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:#6B6B6B!important;text-decoration:none;transition:background .15s,color .15s}
     .dropdown-menu a:hover{background:#F5F5F3;color:#1a1a1a!important}
     .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .article-hero { padding: 3rem 1.25rem 2rem; }
-      .article-body { padding: 2rem 1.25rem 4rem; }
-      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
-    }
+    /* === SITE NAV === */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;height:auto;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04);backdrop-filter:blur(14px)}
+    .nav .nav-left{display:flex;align-items:center}
+    .nav .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav .nav-logo img{height:48px;width:auto;filter:brightness(0.3)}
+    .nav .nav-right{display:flex;align-items:center;gap:28px}
+    .nav .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+    .nav .nav-links a{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#6B6B6B;text-decoration:none;transition:.2s}
+    .nav .nav-links a:hover,.nav .nav-links a.active{color:var(--sky)}
+    .nav .lang-switch{display:flex;gap:6px;align-items:center;margin-left:8px}
+    .nav .lang-switch a{display:flex;align-items:center;justify-content:center;width:28px;height:20px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:.2s;border:1.5px solid rgba(0,0,0,.15);color:#6B6B6B}
+    .nav .lang-switch a.active{border-color:var(--sky);color:var(--sky)}
+    .nav .lang-switch a:hover{border-color:var(--sky);color:var(--sky)}
+    .nav .nav-mob{display:none;cursor:pointer;font-size:22px;color:#333;background:none;border:none;padding:4px}
+    .nav .nav-mm{display:none}
+    .nav .nav-mm .svc-sub{padding-left:16px;display:none;flex-direction:column;gap:10px;margin-top:8px;margin-bottom:8px}
+    .nav .nav-mm .svc-sub.open{display:flex}
+    .nav .nav-mm .svc-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+    .nav .nav-mm .svc-toggle::after{content:"\25BE";font-size:11px;opacity:0.4;transition:transform .2s;display:inline-block}
+    .nav .nav-mm .svc-toggle.open::after{transform:rotate(180deg)}
+    .nav .nav-mm .svc-sub a{font-size:13px!important;font-weight:400!important;color:#6B6B6B!important;display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav .nav-mm .svc-sub .svc-dot{width:6px;height:6px;min-width:6px;border-radius:50%}
+    .article-hero{padding-top:7rem}
+    @media(max-width:1024px){.nav{padding:12px 32px}.nav .nav-links{gap:20px}.nav .nav-links a{font-size:11px}}
+    @media(max-width:768px){.nav{padding:10px 20px}.nav .nav-links{display:none}.nav .nav-mob{display:block}.nav .nav-logo img{height:40px}.nav .lang-switch{margin-left:0}.nav .nav-right{gap:12px}.nav .nav-mm.active{display:flex;flex-direction:column;gap:16px;position:fixed;top:60px;left:0;right:0;background:#fff;padding:24px 20px;border-bottom:1px solid #EAEAEA;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.1)}.nav .nav-mm a{font-size:15px;font-weight:500;color:#333;text-decoration:none}.article-hero{padding:5rem 1.25rem 2rem}.article-body{padding:2rem 1.25rem 4rem}.article-footer-nav-inner{flex-direction:column;align-items:flex-start}}
+    @media(max-width:480px){.nav .nav-logo img{height:32px}}
+    /* === END SITE NAV === */
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="nav-logo">
-      <img src="/logo_grey-blue.png" alt="Locus Design + Innovation" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li class="nav-dropdown"><a href="/#services">Services</a>
+<nav class="nav">
+  <div class="nav-left"><a href="/" class="nav-logo"><img src="logo_grey-blue.png" alt="Locus Design + Innovation"></a></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
         <div class="dropdown-menu">
           <a href="/service-products.html"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
           <a href="/service-cx.html"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
@@ -317,6 +338,90 @@
           <a href="/service-creative.html"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
         </div>
       </div>
+      <a href="/approach.html">How We Work</a>
+      <a href="/work.html">Cases</a>
+      <a href="/our-thinking.html" class="active">Our Thinking</a>
+      <a href="/about.html">About</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="lang-switch">
+      <a href="#" class="active" title="English">EN</a>
+      <a href="/article-org-chart-gr.html" title="Ellinika">GR</a>
+    </div>
+    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
+  </div>
+  <div class="nav-mm">
+    <a href="/" onclick="this.parentElement.classList.remove('active')">Home</a>
+    <a href="#" class="svc-toggle" onclick="event.preventDefault();this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Services</a>
+    <div class="svc-sub">
+      <a href="/service-products.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
+      <a href="/service-cx.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
+      <a href="/service-newbiz.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#26AADB"></span>New Business Models</a>
+      <a href="/service-transform.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#CEB189"></span>Business Transformation</a>
+      <a href="/service-visibility.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#ED6B6B"></span>Strategic Marketing</a>
+      <a href="/service-creative.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
+    </div>
+    <a href="/approach.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
+    <a href="/work.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
+    <a href="/our-thinking.html" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
+    <a href="/about.html" onclick="this.parentElement.classList.remove('active')">About</a>
+    <a href="/#contact" onclick="this.parentElement.classList.remove('active')">Contact</a>
+  </div>
+</nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Organisations</span>
+    <h1>Your Organisational Chart Is <em>Lying</em> To You</h1>
+    <p class="article-lede">In every organisation we've studied, the people who make things happen don't match the structure diagram. What this means for how you make strategic decisions.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>6 min read</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Pull up any organisation chart and it will show you a tidy hierarchy: who reports to whom, who holds what title, who is responsible for which function. It is a useful document for HR and governance. As a map of how the organisation actually works, it is almost entirely fiction.</p>
+
+    <p>Real organisations run on a different kind of <span class="sh-blue">intelligence</span>. It lives in people who are rarely at the top of any chart — and often not named on it at all.</p>
+
+    <p>In years of researching how businesses actually innovate, one of the most consistent findings is the existence of what we came to call <span class="sh-blue">obscure practitioners</span>. These are people whose contribution to the organisation is largely invisible to formal analysis, but whose absence would cause immediate and serious disruption. They are the person who knows which supplier to call when the official one fails. The estimator who reads a project brief and intuitively knows what it will actually cost, not what the spreadsheet says. The unofficial broker who holds relationships across departments that have no formal connection. The self-taught expert who has built a capability the business relies on every day but has never documented, never trained anyone else in, and never charged for.</p>
+
+    <div class="pull-quote">
+      "The organisational chart told you who held authority. It did not tell you who held <span class="sh-blue">influence</span>."
+    </div>
+
+    <p>They do not appear in performance reviews as strategic assets. Their <span class="sh-blue">knowledge</span> is rarely captured in any system. When they leave, their departure is often only understood in retrospect — when the thing they were quietly holding together starts to fall apart.</p>
+
+    <p>This is not a small observation. It has significant implications for how you make strategic decisions.</p>
+
+    <p>If you are designing a new service and you ask only the people the org chart points you toward, you will get a partial picture. The people who know where the <span class="sh-blue">friction</span> actually lives — where the handoffs break down, where customers are quietly disappointed, where the team quietly compensates every day for a process that has never worked — those people are often two or three levels away from the conversation. Sometimes they are not employees at all. Sometimes they are a long-standing supplier, a loyal customer, or a family member who answers the phone when the office is closed.</p>
+
+    <p>If you are planning a change programme and you map your stakeholders by role and seniority, you will spend energy in the wrong places and be surprised by resistance that wasn't visible on any map.</p>
+
+    <p>If you are trying to understand what makes your business good — what actually produces the outcomes that clients value — and you only look at what is formally documented, you will miss most of the answer. A significant proportion of organisational capability is <span class="sh-blue">tacit</span>. It lives in practice, not in policy. In judgment, not in procedure.</p>
+
+    <p>What this requires is a different kind of investigation. Not the consultant's survey. Not the management interview. Something closer to genuine <span class="sh-blue">fieldwork</span> — the patient, curious, non-hierarchical process of understanding how work actually happens, who actually makes it happen, and what would need to be true for change to land rather than bounce.</p>
+
+    <p>At Locus we approach organisations the way a good designer approaches a brief: with deliberate naivety. We do not assume we know what the problem is before we look. We do not privilege formal accounts over informal ones. We follow the work, not the chart.</p>
+
+    <p>The people who make things happen are often the people nobody asked. Start with them.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/our-thinking.html" class="back-link">← All articles</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap.html" class="next-article-link">
+          <span class="tag">Strategy</span>
+          <span class="title">The Clarity Gap: Why Businesses Run But Don't Grow</span>
+        </a>
+        <a href="/article-front-loading.html" class="next-article-link">
+          <span class="tag">Method</span>
+          <span class="title">Front-Loading: Why Starting Slow Gets You There Faster</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <footer>

@@ -300,23 +300,44 @@
     .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:#6B6B6B!important;text-decoration:none;transition:background .15s,color .15s}
     .dropdown-menu a:hover{background:#F5F5F3;color:#1a1a1a!important}
     .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .article-hero { padding: 3rem 1.25rem 2rem; }
-      .article-body { padding: 2rem 1.25rem 4rem; }
-      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
-    }
+    /* === SITE NAV === */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;height:auto;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04);backdrop-filter:blur(14px)}
+    .nav .nav-left{display:flex;align-items:center}
+    .nav .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav .nav-logo img{height:48px;width:auto;filter:brightness(0.3)}
+    .nav .nav-right{display:flex;align-items:center;gap:28px}
+    .nav .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+    .nav .nav-links a{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#6B6B6B;text-decoration:none;transition:.2s}
+    .nav .nav-links a:hover,.nav .nav-links a.active{color:var(--sky)}
+    .nav .lang-switch{display:flex;gap:6px;align-items:center;margin-left:8px}
+    .nav .lang-switch a{display:flex;align-items:center;justify-content:center;width:28px;height:20px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:.2s;border:1.5px solid rgba(0,0,0,.15);color:#6B6B6B}
+    .nav .lang-switch a.active{border-color:var(--sky);color:var(--sky)}
+    .nav .lang-switch a:hover{border-color:var(--sky);color:var(--sky)}
+    .nav .nav-mob{display:none;cursor:pointer;font-size:22px;color:#333;background:none;border:none;padding:4px}
+    .nav .nav-mm{display:none}
+    .nav .nav-mm .svc-sub{padding-left:16px;display:none;flex-direction:column;gap:10px;margin-top:8px;margin-bottom:8px}
+    .nav .nav-mm .svc-sub.open{display:flex}
+    .nav .nav-mm .svc-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+    .nav .nav-mm .svc-toggle::after{content:"\25BE";font-size:11px;opacity:0.4;transition:transform .2s;display:inline-block}
+    .nav .nav-mm .svc-toggle.open::after{transform:rotate(180deg)}
+    .nav .nav-mm .svc-sub a{font-size:13px!important;font-weight:400!important;color:#6B6B6B!important;display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav .nav-mm .svc-sub .svc-dot{width:6px;height:6px;min-width:6px;border-radius:50%}
+    .article-hero{padding-top:7rem}
+    @media(max-width:1024px){.nav{padding:12px 32px}.nav .nav-links{gap:20px}.nav .nav-links a{font-size:11px}}
+    @media(max-width:768px){.nav{padding:10px 20px}.nav .nav-links{display:none}.nav .nav-mob{display:block}.nav .nav-logo img{height:40px}.nav .lang-switch{margin-left:0}.nav .nav-right{gap:12px}.nav .nav-mm.active{display:flex;flex-direction:column;gap:16px;position:fixed;top:60px;left:0;right:0;background:#fff;padding:24px 20px;border-bottom:1px solid #EAEAEA;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.1)}.nav .nav-mm a{font-size:15px;font-weight:500;color:#333;text-decoration:none}.article-hero{padding:5rem 1.25rem 2rem}.article-body{padding:2rem 1.25rem 4rem}.article-footer-nav-inner{flex-direction:column;align-items:flex-start}}
+    @media(max-width:480px){.nav .nav-logo img{height:32px}}
+    /* === END SITE NAV === */
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/index_gr.html" class="nav-logo">
-      <img src="/logo_grey-blue.png" alt="Locus Design + Innovation" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/index_gr.html">Αρχική</a></li>
-      <li class="nav-dropdown"><a href="/index_gr.html#services">Υπηρεσίες</a>
+<nav class="nav">
+  <div class="nav-left"><a href="/index_gr.html" class="nav-logo"><img src="logo_grey-blue.png" alt="Locus Design + Innovation"></a></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/index_gr.html">Αρχική</a>
+      <div class="nav-dropdown">
+        <a href="/index_gr.html#services">Υπηρεσίες</a>
         <div class="dropdown-menu">
           <a href="/service-products_gr.html"><span class="svc-dot" style="background:#4D61A8"></span>Νέα Προϊόντα</a>
           <a href="/service-cx_gr.html"><span class="svc-dot" style="background:#58A998"></span>Υπηρεσίες &#38; Εμπειρίες</a>
@@ -326,6 +347,90 @@
           <a href="/service-creative_gr.html"><span class="svc-dot" style="background:#F5A55E"></span>Περιβάλλοντα Δημιουργίας</a>
         </div>
       </div>
+      <a href="/approach_gr.html">Προσέγγιση</a>
+      <a href="/work_gr.html">Προκλήσεις</a>
+      <a href="/our-thinking_gr.html" class="active">Σκέψεις</a>
+      <a href="/about_gr.html">Ποιοι είμαστε</a>
+      <a href="/index_gr.html#contact">Επικοινωνία</a>
+    </div>
+    <div class="lang-switch">
+      <a href="/article-org-chart.html" title="English">EN</a>
+      <a href="#" class="active" title="Ellinika">GR</a>
+    </div>
+    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
+  </div>
+  <div class="nav-mm">
+    <a href="/index_gr.html" onclick="this.parentElement.classList.remove('active')">Αρχική</a>
+    <a href="#" class="svc-toggle" onclick="event.preventDefault();this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Υπηρεσίες</a>
+    <div class="svc-sub">
+      <a href="/service-products_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#4D61A8"></span>Νέα Προϊόντα</a>
+      <a href="/service-cx_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#58A998"></span>Υπηρεσίες &#38; Εμπειρίες</a>
+      <a href="/service-newbiz_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#26AADB"></span>Νέα Επιχειρηματικά Μοντέλα</a>
+      <a href="/service-transform_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#CEB189"></span>Μετασχηματισμός Επιχειρήσεων</a>
+      <a href="/service-visibility_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#ED6B6B"></span>Στρατηγικές Μάρκετινγκ</a>
+      <a href="/service-creative_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#F5A55E"></span>Περιβάλλοντα Δημιουργίας</a>
+    </div>
+    <a href="/approach_gr.html" onclick="this.parentElement.classList.remove('active')">Προσέγγιση</a>
+    <a href="/work_gr.html" onclick="this.parentElement.classList.remove('active')">Προκλήσεις</a>
+    <a href="/our-thinking_gr.html" onclick="this.parentElement.classList.remove('active')">Σκέψεις</a>
+    <a href="/about_gr.html" onclick="this.parentElement.classList.remove('active')">Ποιοι είμαστε</a>
+    <a href="/index_gr.html#contact" onclick="this.parentElement.classList.remove('active')">Επικοινωνία</a>
+  </div>
+</nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Οργανισμοί</span>
+    <h1>Το Οργανόγραμμά σας<br>σας <em>Λέει Ψέματα</em></h1>
+    <p class="article-lede">Σε πολλές επιχειρήσεις που έχουμε μελετήσει, οι άνθρωποι που κάνουν τα πράγματα να συμβαίνουν δεν αντιστοιχούν στο οργανόγραμμα. Τι σημαίνει αυτό για τον τρόπο που παίρνετε στρατηγικές αποφάσεις.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>6 λεπτά ανάγνωση</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Ανοίξτε οποιοδήποτε οργανόγραμμα και θα σας δείξει μια τακτοποιημένη ιεραρχία: ποιος αναφέρεται σε ποιον, ποιος κατέχει ποιον τίτλο, ποιος είναι υπεύθυνος για ποια λειτουργία. Είναι ένα χρήσιμο έγγραφο για το HR και την εταιρική διακυβέρνηση. Ως χάρτης του πώς λειτουργεί πραγματικά ο οργανισμός, είναι σχεδόν εξ ολοκλήρου μυθοπλασία.</p>
+
+    <p>Οι πραγματικές επιχειρήσεις λειτουργούν με ένα διαφορετικό είδος <span class="sh-blue">νοημοσύνης</span>. Αυτή βρίσκεται σε ανθρώπους που σπάνια βρίσκονται στην κορυφή ενός οργανογράμματος — και συχνά δεν αναφέρονται καν σε αυτό.</p>
+
+    <p>Μετά από χρόνια έρευνας στον τρόπο που οι επιχειρήσεις πραγματικά καινοτομούν, ένα από τα πιο σταθερά ευρήματα είναι η ύπαρξη αυτού που ονομάσαμε <span class="sh-blue">αφανείς επαγγελματίες (obscure practitioners)</span>. Πρόκειται για ανθρώπους των οποίων η συνεισφορά στην επιχείρηση είναι σε μεγάλο βαθμό αόρατη στην επίσημη ανάλυση, αλλά των οποίων η απουσία θα προκαλούσε άμεση και σοβαρή διαταραχή στη λειτουργία. Είναι το άτομο που ξέρει ποιον προμηθευτή να καλέσει όταν ο επίσημος αποτύχει. Ο εκτιμητής που διαβάζει μια πρόταση έργου και διαισθητικά γνωρίζει τι θα κοστίσει πραγματικά, όχι τι λέει το υπολογιστικό φύλλο. Ο ανεπίσημος μεσάζων που διατηρεί σχέσεις μεταξύ τμημάτων που δεν έχουν επίσημη σύνδεση. Ο αυτοδίδακτος εμπειρογνώμονας που έχει οικοδομήσει μια ικανότητα στην οποία βασίζεται η επιχείρηση κάθε μέρα, αλλά δεν την έχει καταγράψει ποτέ, δεν έχει εκπαιδεύσει ποτέ κανέναν άλλον σε αυτήν και δεν την έχει χρεώσει ποτέ.</p>
+
+    <div class="pull-quote">
+      «Το οργανόγραμμα σου δείχνει ποιος έχει την εξουσία. Δεν σου δείχνει ποιος έχει την <span class="sh-blue">επιρροή</span>.»
+    </div>
+
+    <p>Δεν εμφανίζονται στις αξιολογήσεις απόδοσης ως στρατηγικά περιουσιακά στοιχεία. Η <span class="sh-blue">γνώση</span> τους σπάνια καταγράφεται σε κάποιο σύστημα. Όταν φεύγουν, η αποχώρησή τους συχνά γίνεται κατανοητή μόνο εκ των υστέρων — όταν αυτό που κρατούσαν ήσυχα ενωμένο αρχίζει να καταρρέει.</p>
+
+    <p>Αυτή δεν είναι μια μικρή παρατήρηση. Έχει σημαντικές επιπτώσεις στον τρόπο που παίρνετε στρατηγικές αποφάσεις.</p>
+
+    <p>Αν σχεδιάζετε μια νέα υπηρεσία και ρωτάτε μόνο τους ανθρώπους που σας δείχνει το οργανόγραμμα, θα έχετε μια μερική εικόνα. Οι άνθρωποι που γνωρίζουν πού βρίσκεται πραγματικά η <span class="sh-blue">τριβή</span> — πού σπάνε οι παραδόσεις εργασιών, πού οι πελάτες απογοητεύονται σιωπηλά, πού η ομάδα αντισταθμίζει καθημερινά, αθόρυβα, μια διαδικασία που δεν λειτούργησε ποτέ — αυτοί οι άνθρωποι βρίσκονται συχνά δύο ή τρία επίπεδα μακριά από τη συζήτηση. Μερικές φορές δεν είναι καν υπάλληλοι. Μερικές φορές είναι ένας μακροχρόνιος προμηθευτής, ένας πιστός πελάτης, ή ένα μέλος της οικογένειας που απαντά στο τηλέφωνο όταν το γραφείο είναι κλειστό.</p>
+
+    <p>Αν σχεδιάζετε ένα πρόγραμμα αλλαγής και χαρτογραφείτε τα ενδιαφερόμενα μέρη (stakeholders) σας βάσει ρόλου και ιεραρχίας, θα ξοδέψετε ενέργεια στα λάθος σημεία και θα εκπλαγείτε από αντίσταση που δεν ήταν ορατή σε κανένα χάρτη.</p>
+
+    <p>Αν προσπαθείτε να κατανοήσετε τι κάνει την επιχείρησή σας καλή — τι παράγει πραγματικά τα αποτελέσματα που εκτιμούν οι πελάτες — και κοιτάζετε μόνο ό,τι είναι τυπικά τεκμηριωμένο, θα χάσετε το μεγαλύτερο μέρος της απάντησης. Ένα σημαντικό ποσοστό της οργανωσιακής ικανότητας είναι <span class="sh-blue">άρρητη γνώση (tacit)</span>. Ζει στην πράξη, όχι στην πολιτική. Στην κρίση, όχι στη διαδικασία.</p>
+
+    <p>Αυτό που απαιτείται είναι ένα διαφορετικό είδος διερεύνησης. Όχι η έρευνα των συμβούλων. Όχι η συνέντευξη της διοίκησης. Κάτι πιο κοντά σε γνήσια <span class="sh-blue">επιτόπια έρευνα (fieldwork)</span> — η υπομονετική, περίεργη, μη ιεραρχική διαδικασία κατανόησης του πώς συμβαίνει πραγματικά η εργασία, ποιοι είναι αυτοί που την κάνουν να συμβεί, και τι θα χρειαζόταν να ισχύει ώστε η αλλαγή να ριζώσει αντί να αναπηδήσει.</p>
+
+    <p>Στο Locus προσεγγίζουμε τους οργανισμούς με τον τρόπο που ένας καλός σχεδιαστής προσεγγίζει ένα brief: με εσκεμμένη αφέλεια. Δεν υποθέτουμε ότι γνωρίζουμε ποιο είναι το πρόβλημα προτού το εξετάσουμε. Δεν δίνουμε προτεραιότητα στις επίσημες αναφορές έναντι των ανεπίσημων. Ακολουθούμε την εργασία, όχι το οργανόγραμμα.</p>
+
+    <p>Οι άνθρωποι που κάνουν τα πράγματα να συμβαίνουν είναι συχνά οι άνθρωποι που κανείς δεν ρώτησε. Ξεκινήστε από αυτούς.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/our-thinking_gr.html" class="back-link">← Όλα τα άρθρα</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap-gr.html" class="next-article-link">
+          <span class="tag">Στρατηγική</span>
+          <span class="title">Το Κενό Σαφήνειας: Γιατί οι Επιχειρήσεις Τρέχουν αλλά δεν Αναπτύσσονται</span>
+        </a>
+        <a href="/article-front-loading-gr.html" class="next-article-link">
+          <span class="tag">Μέθοδος</span>
+          <span class="title">Front-Loading: Γιατί το Αργό Ξεκίνημα σας Φέρνει Πιο Γρήγορα στον Στόχο</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <footer>

@@ -318,23 +318,44 @@
     .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:#6B6B6B!important;text-decoration:none;transition:background .15s,color .15s}
     .dropdown-menu a:hover{background:#F5F5F3;color:#1a1a1a!important}
     .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .article-hero { padding: 3rem 1.25rem 2rem; }
-      .article-body { padding: 2rem 1.25rem 4rem; }
-      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
-    }
+    /* === SITE NAV === */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;height:auto;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04);backdrop-filter:blur(14px)}
+    .nav .nav-left{display:flex;align-items:center}
+    .nav .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav .nav-logo img{height:48px;width:auto;filter:brightness(0.3)}
+    .nav .nav-right{display:flex;align-items:center;gap:28px}
+    .nav .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+    .nav .nav-links a{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#6B6B6B;text-decoration:none;transition:.2s}
+    .nav .nav-links a:hover,.nav .nav-links a.active{color:var(--sky)}
+    .nav .lang-switch{display:flex;gap:6px;align-items:center;margin-left:8px}
+    .nav .lang-switch a{display:flex;align-items:center;justify-content:center;width:28px;height:20px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:.2s;border:1.5px solid rgba(0,0,0,.15);color:#6B6B6B}
+    .nav .lang-switch a.active{border-color:var(--sky);color:var(--sky)}
+    .nav .lang-switch a:hover{border-color:var(--sky);color:var(--sky)}
+    .nav .nav-mob{display:none;cursor:pointer;font-size:22px;color:#333;background:none;border:none;padding:4px}
+    .nav .nav-mm{display:none}
+    .nav .nav-mm .svc-sub{padding-left:16px;display:none;flex-direction:column;gap:10px;margin-top:8px;margin-bottom:8px}
+    .nav .nav-mm .svc-sub.open{display:flex}
+    .nav .nav-mm .svc-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+    .nav .nav-mm .svc-toggle::after{content:"\25BE";font-size:11px;opacity:0.4;transition:transform .2s;display:inline-block}
+    .nav .nav-mm .svc-toggle.open::after{transform:rotate(180deg)}
+    .nav .nav-mm .svc-sub a{font-size:13px!important;font-weight:400!important;color:#6B6B6B!important;display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav .nav-mm .svc-sub .svc-dot{width:6px;height:6px;min-width:6px;border-radius:50%}
+    .article-hero{padding-top:7rem}
+    @media(max-width:1024px){.nav{padding:12px 32px}.nav .nav-links{gap:20px}.nav .nav-links a{font-size:11px}}
+    @media(max-width:768px){.nav{padding:10px 20px}.nav .nav-links{display:none}.nav .nav-mob{display:block}.nav .nav-logo img{height:40px}.nav .lang-switch{margin-left:0}.nav .nav-right{gap:12px}.nav .nav-mm.active{display:flex;flex-direction:column;gap:16px;position:fixed;top:60px;left:0;right:0;background:#fff;padding:24px 20px;border-bottom:1px solid #EAEAEA;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.1)}.nav .nav-mm a{font-size:15px;font-weight:500;color:#333;text-decoration:none}.article-hero{padding:5rem 1.25rem 2rem}.article-body{padding:2rem 1.25rem 4rem}.article-footer-nav-inner{flex-direction:column;align-items:flex-start}}
+    @media(max-width:480px){.nav .nav-logo img{height:32px}}
+    /* === END SITE NAV === */
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/index_gr.html" class="nav-logo">
-      <img src="/logo_grey-blue.png" alt="Locus Design + Innovation" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/index_gr.html">Αρχική</a></li>
-      <li class="nav-dropdown"><a href="/index_gr.html#services">Υπηρεσίες</a>
+<nav class="nav">
+  <div class="nav-left"><a href="/index_gr.html" class="nav-logo"><img src="logo_grey-blue.png" alt="Locus Design + Innovation"></a></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/index_gr.html">Αρχική</a>
+      <div class="nav-dropdown">
+        <a href="/index_gr.html#services">Υπηρεσίες</a>
         <div class="dropdown-menu">
           <a href="/service-products_gr.html"><span class="svc-dot" style="background:#4D61A8"></span>Νέα Προϊόντα</a>
           <a href="/service-cx_gr.html"><span class="svc-dot" style="background:#58A998"></span>Υπηρεσίες &#38; Εμπειρίες</a>
@@ -344,6 +365,95 @@
           <a href="/service-creative_gr.html"><span class="svc-dot" style="background:#F5A55E"></span>Περιβάλλοντα Δημιουργίας</a>
         </div>
       </div>
+      <a href="/approach_gr.html">Προσέγγιση</a>
+      <a href="/work_gr.html">Προκλήσεις</a>
+      <a href="/our-thinking_gr.html" class="active">Σκέψεις</a>
+      <a href="/about_gr.html">Ποιοι είμαστε</a>
+      <a href="/index_gr.html#contact">Επικοινωνία</a>
+    </div>
+    <div class="lang-switch">
+      <a href="/article-front-loading.html" title="English">EN</a>
+      <a href="#" class="active" title="Ellinika">GR</a>
+    </div>
+    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
+  </div>
+  <div class="nav-mm">
+    <a href="/index_gr.html" onclick="this.parentElement.classList.remove('active')">Αρχική</a>
+    <a href="#" class="svc-toggle" onclick="event.preventDefault();this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Υπηρεσίες</a>
+    <div class="svc-sub">
+      <a href="/service-products_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#4D61A8"></span>Νέα Προϊόντα</a>
+      <a href="/service-cx_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#58A998"></span>Υπηρεσίες &#38; Εμπειρίες</a>
+      <a href="/service-newbiz_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#26AADB"></span>Νέα Επιχειρηματικά Μοντέλα</a>
+      <a href="/service-transform_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#CEB189"></span>Μετασχηματισμός Επιχειρήσεων</a>
+      <a href="/service-visibility_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#ED6B6B"></span>Στρατηγικές Μάρκετινγκ</a>
+      <a href="/service-creative_gr.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#F5A55E"></span>Περιβάλλοντα Δημιουργίας</a>
+    </div>
+    <a href="/approach_gr.html" onclick="this.parentElement.classList.remove('active')">Προσέγγιση</a>
+    <a href="/work_gr.html" onclick="this.parentElement.classList.remove('active')">Προκλήσεις</a>
+    <a href="/our-thinking_gr.html" onclick="this.parentElement.classList.remove('active')">Σκέψεις</a>
+    <a href="/about_gr.html" onclick="this.parentElement.classList.remove('active')">Ποιοι είμαστε</a>
+    <a href="/index_gr.html#contact" onclick="this.parentElement.classList.remove('active')">Επικοινωνία</a>
+  </div>
+</nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Μέθοδος</span>
+    <h1>Front-Loading: Γιατί<br>το <em>αργό ξεκίνημα</em> σας φέρνει<br>πιο γρήγορα στον στόχο</h1>
+    <p class="article-lede">Υπάρχει πίεση, σε οποιοδήποτε έργο, για να ξεκινήσουν τα πράγματα. Αυτή η πίεση είναι επίσης ένας από τους πιο σίγουρους τρόπους για να εγγυηθείς ένα κακό αποτέλεσμα.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>7 λεπτά ανάγνωση</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>Σε κάθε έργο, υπάρχει η πίεση να ξεκινήσουμε άμεσα. Να δείξουμε πρόοδο. Να παράγουμε κάτι που αποδεικνύει ότι η δουλειά έχει αρχίσει. Είναι κατανοητό — ο χρόνος κοστίζει χρήμα, η ορμή (momentum) έχει σημασία, και υπάρχει μια φυσική δυσφορία στο να κάθεσαι με ένα πρόβλημα πριν προσπαθήσεις να το λύσεις.</p>
+
+    <p>Αυτή η πίεση είναι επίσης ένας από τους πιο αξιόπιστους τρόπους για να εγγυηθείς ένα κακό αποτέλεσμα.</p>
+
+    <p>Η αρχή βάσει της οποίας εργαζόμαστε ονομάζεται <span class="sh-blue">«front-loading»</span> (εκ των προτέρων συγκέντρωση προσπάθειας). Σημαίνει την επένδυση δυσανάλογου χρόνου, προσοχής και πόρων στην αρχή ενός έργου — στην <span class="sh-blue">κατανόηση</span> της κατάστασης πριν επιχειρήσουμε να δράσουμε πάνω σε αυτήν. Φαντάζει αντιφατικό. Μπορεί να δίνει την αίσθηση του αργού, ακόμη και του περιττού, όταν ο πελάτης είναι έτοιμος να ξεκινήσει και η ομάδα θέλει να χτίσει. Όμως τα στοιχεία είναι συνεπή: η ποιότητα όλων όσων ακολουθούν καθορίζεται από την ποιότητα αυτής της πρώιμης εργασίας.</p>
+
+    <p>Η λογική είναι απλή. Μια λύση που βασίζεται σε ένα πρόβλημα που δεν έχει κατανοηθεί καλά, δεν αποτυγχάνει απλώς να λύσει το πρόβλημα — συχνά το κάνει χειρότερο. Έχετε πλέον επενδύσει χρόνο, χρήμα και σημαντικό κεφάλαιο σε μια απάντηση για το λάθος ερώτημα. Η αλλαγή πορείας είναι σημαντικά πιο δύσκολη από ό,τι θα ήταν αν είχατε ξεκινήσει με μεγαλύτερη προσοχή. Το κόστος της καθυστερημένης διόρθωσης ξεπερνά κατά πολύ το κόστος της πρώιμης υπομονής.</p>
+
+    <div class="funnel-diagram">
+      <img src="funnel_gr.png" alt="Το Design Funnel της Locus: Ανακάλυψη, Ορισμός, Ανάπτυξη, Παράδοση" />
+      <p class="funnel-emphasis">Το αρχικό στάδιο — Ανακάλυψη και Ορισμός — είναι το σημείο όπου δημιουργείται η αξία. Όλα τα επόμενα στάδια μετατρέπουν αυτό που έχει καταστήσει διαθέσιμο το αρχικό στάδιο.</p>
+    </div>
+
+    <div class="pull-quote">
+      «Η ταχύτητα δεν βρίσκεται στην αρχή. Κερδίζεται εκεί.»
+    </div>
+
+    <p>Η πρακτική του σχεδιασμού έχει μια δομική κωδικοποίηση αυτής της αρχής. Η <span class="sh-blue">«Χοάνη Σχεδιασμού»</span> (Design Funnel) — η προσαρμογή μας του «Διπλού Διαμαντιού» (Double Diamond) του Design Council, UK — αποτυπώνει το σχήμα της καλής διαδικασίας στρατηγικής και καινοτομίας. Τα αρχικά στάδια είναι ευρέα: μέγιστη απόκλιση (divergence), ευρύτερη εξερεύνηση, η σκόπιμη άρνηση να περιορίσουμε τις επιλογές πολύ νωρίς. Τα μεταγενέστερα στάδια σταδιακά συγκλίνουν: στενεύουν (convergence) προς την υλοποίηση, καθώς η <span class="sh-blue">κατανόηση</span> συσσωρεύεται και οι επιλογές γίνονται αποφάσεις.</p>
+
+    <p>Αυτό που κάνει ορατή η χοάνη (funnel) είναι ότι αυτό το σχήμα δεν είναι συμμετρικό. Το <span class="sh-blue">αρχικό στάδιο</span> δεν είναι ένα σύντομο προοίμιο πριν αρχίσει η πραγματική δουλειά. Είναι η πραγματική δουλειά. Τα στάδια Ανακάλυψης και Ορισμού είναι εκεί που χτίζεται η αξία. Η μετέπειτα εργασία, όσο καλά κι αν εκτελεστεί, μπορεί μόνο να μετατρέψει αυτό που έχει καταστήσει διαθέσιμο το αρχικό στάδιο.</p>
+
+    <p>Στην πράξη, το front-loading μοιάζει με αυτό: δεν αποδεχόμαστε ένα brief τοις μετρητοίς. Όχι επειδή οι πελάτες κάνουν λάθος, αλλά επειδή κάθε brief γράφεται μέσα από την κατάσταση που προσπαθεί να περιγράψει. Το πρόβλημα όπως παρουσιάζεται αρχικά είναι πάντα ένα σημείο εκκίνησης, ποτέ ένα τελικό σημείο. Ξεκινάμε δημιουργώντας αυτό που ονομάζουμε <span class="sh-blue">problem-space tapestry</span> — μια οπτική εξωτερίκευση όλων όσων ξέρουμε, υποθέτουμε, αμφισβητούμε και δεν κατανοούμε ακόμη σχετικά με την πρόκληση. Είναι σκόπιμα μη ιεραρχικό και μη επικριτικό. Σκοπός του είναι να καταστήσει ορατή την πλήρη πολυπλοκότητα της κατάστασης, πριν αρχίσουμε να τη συμπιέζουμε.</p>
+
+    <p>Στη συνέχεια αναζητούμε <span class="sh-blue">μοτίβα</span>. Επικαλύπτουμε εξωτερικό πλαίσιο — αλλαγές στην αγορά, συμπεριφορικές τάσεις, παράπλευρες πιέσεις. Μιλάμε με τους ανθρώπους που δεν αναφέρει το brief. Θέτουμε το ερώτημα πίσω από το ερώτημα. Μόνο όταν η εικόνα είναι αρκετά πλούσια ώστε να την εμπιστευτούμε, αρχίζουμε να προχωρούμε προς τον ορισμό: ονομάζουμε την πραγματική ευκαιρία, πλαισιώνοντας την πρόκληση με τρόπο που επιτρέπει τη δημιουργική απόκριση αντί να την περιορίζει.</p>
+
+    <p>Αυτή δεν είναι αργή δουλειά. Είναι γρήγορη δουλειά που γίνεται σωστά. Ένα έργο που αφιερώνει τρεις εβδομάδες για να κάνει κάτι σωστά, κινείται συνολικά πιο γρήγορα από ένα έργο που αφιερώνει τρεις εβδομάδες χτίζοντας το λάθος πράγμα και τρεις μήνες προσπαθώντας να ανακάμψει. Το front-loading συμπυκνώνει το συνολικό χρονοδιάγραμμα, εξαλείφοντας τις λανθασμένες εκκινήσεις, τις διορθώσεις πορείας και τις ακριβές παρεξηγήσεις που προκύπτουν από τη δράση βασισμένη σε μια ημιτελή εικόνα.</p>
+
+    <p>Οι επιχειρήσεις που δυσκολεύονται περισσότερο με αυτό, είναι εκείνες που βρίσκονται υπό τη μεγαλύτερη πίεση. Δεν έχουν την πολυτέλεια να επιβραδύνουν. Όμως, είναι επίσης, χαρακτηριστικά, εκείνες που έχουν ήδη πληρώσει το τίμημα της πολύ γρήγορης κίνησης — το λανσάρισμα προϊόντος που απέτυχε, το rebrand που δεν απέδωσε, η πρόσληψη που έλυσε το λάθος <span class="sh-blue">πρόβλημα</span>.</p>
+
+    <p>Ξεκινήστε με το πρόβλημα. Ξεκινήστε πραγματικά με αυτό. Η λύση θα έρθει γρηγορότερα από ό,τι νομίζετε.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/our-thinking_gr.html" class="back-link">← Όλα τα άρθρα</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap-gr.html" class="next-article-link">
+          <span class="tag">Στρατηγική</span>
+          <span class="title">Το Κενό Σαφήνειας: Γιατί οι Επιχειρήσεις Τρέχουν αλλά δεν Αναπτύσσονται</span>
+        </a>
+        <a href="/article-org-chart-gr.html" class="next-article-link">
+          <span class="tag">Οργανισμοί</span>
+          <span class="title">Το Οργανόγραμμά σας Σας Λέει Ψέματα</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <footer>

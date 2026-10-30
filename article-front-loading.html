@@ -320,23 +320,44 @@
     .dropdown-menu a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px!important;font-weight:400!important;letter-spacing:.5px!important;text-transform:none!important;color:#6B6B6B!important;text-decoration:none;transition:background .15s,color .15s}
     .dropdown-menu a:hover{background:#F5F5F3;color:#1a1a1a!important}
     .dropdown-menu .svc-dot{width:8px;height:8px;min-width:8px;border-radius:50%;flex-shrink:0}
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .article-hero { padding: 3rem 1.25rem 2rem; }
-      .article-body { padding: 2rem 1.25rem 4rem; }
-      .article-footer-nav-inner { flex-direction: column; align-items: flex-start; }
-    }
+    /* === SITE NAV === */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 48px;height:auto;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05);box-shadow:0 1px 12px rgba(0,0,0,.04);backdrop-filter:blur(14px)}
+    .nav .nav-left{display:flex;align-items:center}
+    .nav .nav-logo{display:flex;align-items:center;text-decoration:none}
+    .nav .nav-logo img{height:48px;width:auto;filter:brightness(0.3)}
+    .nav .nav-right{display:flex;align-items:center;gap:28px}
+    .nav .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+    .nav .nav-links a{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#6B6B6B;text-decoration:none;transition:.2s}
+    .nav .nav-links a:hover,.nav .nav-links a.active{color:var(--sky)}
+    .nav .lang-switch{display:flex;gap:6px;align-items:center;margin-left:8px}
+    .nav .lang-switch a{display:flex;align-items:center;justify-content:center;width:28px;height:20px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.5px;text-decoration:none;transition:.2s;border:1.5px solid rgba(0,0,0,.15);color:#6B6B6B}
+    .nav .lang-switch a.active{border-color:var(--sky);color:var(--sky)}
+    .nav .lang-switch a:hover{border-color:var(--sky);color:var(--sky)}
+    .nav .nav-mob{display:none;cursor:pointer;font-size:22px;color:#333;background:none;border:none;padding:4px}
+    .nav .nav-mm{display:none}
+    .nav .nav-mm .svc-sub{padding-left:16px;display:none;flex-direction:column;gap:10px;margin-top:8px;margin-bottom:8px}
+    .nav .nav-mm .svc-sub.open{display:flex}
+    .nav .nav-mm .svc-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+    .nav .nav-mm .svc-toggle::after{content:"\25BE";font-size:11px;opacity:0.4;transition:transform .2s;display:inline-block}
+    .nav .nav-mm .svc-toggle.open::after{transform:rotate(180deg)}
+    .nav .nav-mm .svc-sub a{font-size:13px!important;font-weight:400!important;color:#6B6B6B!important;display:flex;align-items:center;gap:8px;text-decoration:none}
+    .nav .nav-mm .svc-sub .svc-dot{width:6px;height:6px;min-width:6px;border-radius:50%}
+    .article-hero{padding-top:7rem}
+    @media(max-width:1024px){.nav{padding:12px 32px}.nav .nav-links{gap:20px}.nav .nav-links a{font-size:11px}}
+    @media(max-width:768px){.nav{padding:10px 20px}.nav .nav-links{display:none}.nav .nav-mob{display:block}.nav .nav-logo img{height:40px}.nav .lang-switch{margin-left:0}.nav .nav-right{gap:12px}.nav .nav-mm.active{display:flex;flex-direction:column;gap:16px;position:fixed;top:60px;left:0;right:0;background:#fff;padding:24px 20px;border-bottom:1px solid #EAEAEA;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.1)}.nav .nav-mm a{font-size:15px;font-weight:500;color:#333;text-decoration:none}.article-hero{padding:5rem 1.25rem 2rem}.article-body{padding:2rem 1.25rem 4rem}.article-footer-nav-inner{flex-direction:column;align-items:flex-start}}
+    @media(max-width:480px){.nav .nav-logo img{height:32px}}
+    /* === END SITE NAV === */
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="nav-logo">
-      <img src="/logo_grey-blue.png" alt="Locus Design + Innovation" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li class="nav-dropdown"><a href="/#services">Services</a>
+<nav class="nav">
+  <div class="nav-left"><a href="/" class="nav-logo"><img src="logo_grey-blue.png" alt="Locus Design + Innovation"></a></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
         <div class="dropdown-menu">
           <a href="/service-products.html"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
           <a href="/service-cx.html"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
@@ -346,6 +367,95 @@
           <a href="/service-creative.html"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
         </div>
       </div>
+      <a href="/approach.html">How We Work</a>
+      <a href="/work.html">Cases</a>
+      <a href="/our-thinking.html" class="active">Our Thinking</a>
+      <a href="/about.html">About</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="lang-switch">
+      <a href="#" class="active" title="English">EN</a>
+      <a href="/article-front-loading-gr.html" title="Ellinika">GR</a>
+    </div>
+    <button class="nav-mob" onclick="document.querySelector('.nav-mm').classList.toggle('active')">&#9776;</button>
+  </div>
+  <div class="nav-mm">
+    <a href="/" onclick="this.parentElement.classList.remove('active')">Home</a>
+    <a href="#" class="svc-toggle" onclick="event.preventDefault();this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Services</a>
+    <div class="svc-sub">
+      <a href="/service-products.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#4D61A8"></span>New Products &#38; Propositions</a>
+      <a href="/service-cx.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#58A998"></span>Experience Design</a>
+      <a href="/service-newbiz.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#26AADB"></span>New Business Models</a>
+      <a href="/service-transform.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#CEB189"></span>Business Transformation</a>
+      <a href="/service-visibility.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#ED6B6B"></span>Strategic Marketing</a>
+      <a href="/service-creative.html" onclick="this.closest('.nav-mm').classList.remove('active')"><span class="svc-dot" style="background:#F5A55E"></span>Creative Environments</a>
+    </div>
+    <a href="/approach.html" onclick="this.parentElement.classList.remove('active')">How We Work</a>
+    <a href="/work.html" onclick="this.parentElement.classList.remove('active')">Cases</a>
+    <a href="/our-thinking.html" onclick="this.parentElement.classList.remove('active')">Our Thinking</a>
+    <a href="/about.html" onclick="this.parentElement.classList.remove('active')">About</a>
+    <a href="/#contact" onclick="this.parentElement.classList.remove('active')">Contact</a>
+  </div>
+</nav>
+
+  <header class="article-hero">
+    <span class="article-tag">Method</span>
+    <h1>Front-Loading: Why Starting <em>Slow</em> Gets You There Faster</h1>
+    <p class="article-lede">There is a pressure, in any project, to get moving. That pressure is also one of the most reliable ways to guarantee a poor outcome.</p>
+    <div class="article-meta">
+      <span>Locus Design + Innovation</span>
+      <span>2025</span>
+      <span>7 min read</span>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <p>There is a pressure, in any project, to get moving. To show progress. To produce something that proves the work has started. It is understandable — time costs money, momentum matters, and there is a natural discomfort in sitting with a problem before attempting to solve it.</p>
+
+    <p>This pressure is also one of the most reliable ways to guarantee a poor outcome.</p>
+
+    <p>The principle we work with is called <span class="sh-blue">front-loading</span>. It means investing a disproportionate amount of time, attention, and resource at the beginning of a project — in <span class="sh-blue">understanding</span> the situation before attempting to act on it. It feels counterintuitive. It can feel slow, even indulgent, when the client is ready to move and the team wants to build. But the evidence is consistent: the quality of everything that follows is determined by the quality of this early work.</p>
+
+    <p>The logic is straightforward. A solution built on a poorly understood problem does not just fail to solve that problem — it often makes it worse. You have now invested time, money, and political capital in an answer to the wrong question. Reversing course is significantly harder than it would have been to start more carefully. The cost of late correction dwarfs the cost of early patience.</p>
+
+    <div class="funnel-diagram">
+      <img src="funnel.png" alt="The Locus Design Funnel: Discover, Define, Develop, Deliver" />
+      <p class="funnel-emphasis">The front end — Discover and Define — is where value is built. Everything downstream converts what the front end makes available.</p>
+    </div>
+
+    <div class="pull-quote">
+      "Speed is not found at the beginning. It is earned there."
+    </div>
+
+    <p>Design practice has a structural encoding of this principle. The <span class="sh-blue">Design Funnel</span> — our adaptation of the Design Council's Double Diamond — maps the shape of good innovation process. The early phases are wide: maximum divergence, broadest exploration, the deliberate refusal to narrow too soon. The later phases progressively converge, tightening toward delivery as <span class="sh-blue">understanding</span> accumulates and options become choices.</p>
+
+    <p>What the funnel makes visible is that this shape is not symmetric. The <span class="sh-blue">front end</span> is not a brief preamble before the real work starts. It is the real work. The Discover and Define phases are where the value is built. The downstream work, however well executed, can only convert what the front end has made available.</p>
+
+    <p>In practice, front-loading looks like this. We do not accept a brief at face value. Not because clients are wrong, but because every brief is written from inside the situation it is trying to describe. The problem as initially presented is always a starting point, never an endpoint. We begin by creating what we call a <span class="sh-blue">problem-space tapestry</span> — a visual externalisation of everything we know, assume, question, and don't yet understand about the challenge. It is deliberately non-hierarchical and non-judgemental. Its purpose is to make the full complexity of the situation visible before we start compressing it.</p>
+
+    <p>Then we look for <span class="sh-blue">patterns</span>. We overlay external context — market shifts, behavioural trends, adjacent pressures. We talk to the people the brief did not mention. We ask the question behind the question. Only when the picture is rich enough to trust do we begin moving toward definition: naming the real opportunity, framing the challenge in a way that enables creative response rather than constraining it.</p>
+
+    <p>This is not slow work. It is fast work done correctly. A project that spends three weeks doing this properly moves faster in total than a project that spends three weeks building the wrong thing and three months trying to recover. Front-loading compresses the total timeline by eliminating the false starts, the course corrections, and the expensive misunderstandings that come from acting on an incomplete picture.</p>
+
+    <p>Businesses that struggle most with this are the ones under the most pressure. They cannot afford to slow down. But they are also, characteristically, the ones who have already paid the cost of moving too quickly — the product launch that missed, the rebrand that didn't land, the hire that solved the wrong <span class="sh-blue">problem</span>.</p>
+
+    <p>Start with the problem. Really start with it. The solution will come faster than you think.</p>
+  </main>
+
+  <div class="article-footer-nav">
+    <div class="article-footer-nav-inner">
+      <a href="/our-thinking.html" class="back-link">← All articles</a>
+      <div class="next-articles">
+        <a href="/article-clarity-gap.html" class="next-article-link">
+          <span class="tag">Strategy</span>
+          <span class="title">The Clarity Gap: Why Businesses Run But Don't Grow</span>
+        </a>
+        <a href="/article-org-chart.html" class="next-article-link">
+          <span class="tag">Organisations</span>
+          <span class="title">Your Org Chart Is Lying To You</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <footer>
