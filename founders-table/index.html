@@ -163,6 +163,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .after{margin:14px 0 0;font-size:15px;color:var(--ink-2);text-align:center}
 .err{display:none;margin-top:16px;padding:14px 16px;border-left:3px solid var(--red);background:#FFFFFF;font-size:15px}
 .err.show{display:block}
+#thanks:focus{outline:none}
 .thanks{display:none;margin-top:40px;padding:44px 36px;background:var(--ink);color:var(--bg)}
 .thanks.show{display:block}
 .thanks svg{width:56px;height:56px}
@@ -196,6 +197,7 @@ body.locked{overflow:hidden}
   dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0}
   .dlg-head{padding:calc(16px + env(safe-area-inset-top,0px)) 20px 14px}
   .dlg-body{padding:22px 20px calc(28px + env(safe-area-inset-bottom,0px))}
+  .dlg-sub{display:none}
 }
 footer{margin-top:96px;padding:24px 0 120px;border-top:1.5px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Noto Sans Mono',monospace;font-size:13px;letter-spacing:.1em;color:var(--ink-2)}
 
@@ -383,7 +385,7 @@ footer{margin-top:96px;padding:24px 0 120px;border-top:1.5px solid var(--rule);d
 
 <dialog id="form-dialog" aria-labelledby="dlg-title">
   <div class="dlg-head">
-    <div><span class="label">Κράτηση θέσης // The Founders’ Table</span><h3 id="dlg-title">Κλείσε τη θέση σου.</h3></div>
+    <div><span class="label">Κράτηση θέσης<span class="dlg-sub"> // The Founders’ Table</span></span><h3 id="dlg-title">Κλείσε τη θέση σου.</h3></div>
     <button class="close" type="button" data-close aria-label="Κλείσιμο"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
   </div>
   <div class="dlg-body">
