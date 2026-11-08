@@ -451,12 +451,45 @@ footer{margin-top:96px;padding:24px 0 120px;border-top:1.5px solid var(--rule);d
 <script>
 // Formspree form ID, e.g. "xyzabcd" from https://formspree.io/f/xyzabcd
 const FORMSPREE_ID = 'mljjkozn';
+const SEATS_TOTAL = 8;
+const SEATS_TAKEN = 0; // paid + seats on 48h hold
 
 (function () {
   const form = document.getElementById('rsvp');
   const err = document.getElementById('err');
   const thanks = document.getElementById('thanks');
   const btn = form.querySelector('.submit');
+
+  // Seat availability states (applied on load, no-JS shows default)
+  var seatsLeft = SEATS_TOTAL - SEATS_TAKEN;
+  var full = SEATS_TAKEN >= SEATS_TOTAL;
+  var low = SEATS_TAKEN >= 6 && !full;
+  if (low || full) {
+    var seatLabel = full ? 'Οι θέσεις συμπληρώθηκαν' :
+      (seatsLeft === 1 ? 'Έμεινε 1 θέση' : 'Έμειναν ' + seatsLeft + ' θέσεις');
+    document.querySelectorAll('.submit .a').forEach(function (a) {
+      var s = a.querySelectorAll('span');
+      s[s.length - 1].textContent = seatLabel;
+    });
+    var ss = document.querySelector('#sticky small');
+    if (ss) ss.textContent = full ? 'Λίστα αναμονής' :
+      (seatsLeft === 1 ? 'Έμεινε 1 θέση' : 'Έμειναν ' + seatsLeft + ' θέσεις') + ' · από 28/11';
+  }
+  if (full) {
+    document.querySelectorAll('[data-open-form]').forEach(function (b) {
+      var t = b.querySelector('.t');
+      if (t) t.childNodes[0].textContent = 'Λίστα αναμονής ';
+      else b.textContent = 'ΛΙΣΤΑ ΑΝΑΜΟΝΗΣ';
+    });
+    btn.querySelector('.t').childNodes[0].textContent = 'Μπες στη λίστα αναμονής ';
+    form.querySelector('input[name="_subject"]').value = 'The Founders\u2019 Table \u00b7 Λίστα αναμονής';
+    thanks.querySelector('h3').textContent = 'Είσαι στη λίστα αναμονής.';
+    thanks.querySelector('p').textContent = 'Αν ελευθερωθεί θέση, θα σε ειδοποιήσουμε με email.';
+    var wn = document.createElement('p');
+    wn.style.margin = '0 0 22px';
+    wn.textContent = 'Οι 8 θέσεις συμπληρώθηκαν. Δήλωσε συμμετοχή στη λίστα αναμονής και θα σε ειδοποιήσουμε με τη σειρά, αν ελευθερωθεί θέση.';
+    form.insertBefore(wn, form.querySelector('.grid'));
+  }
 
   function showError(msg) { err.textContent = msg; err.classList.add('show'); }
 
