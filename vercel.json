@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/founders-table",
+      "destination": "/founders-table/",
+      "permanent": true
+    }
+  ]
+}
