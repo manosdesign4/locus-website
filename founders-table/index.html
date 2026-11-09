@@ -187,6 +187,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 @keyframes draw{to{stroke-dashoffset:0}}
 .thanks h3{margin:18px 0 8px;font-weight:800;font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.05}
 .thanks p{margin:0;max-width:34em;opacity:.9}
+.thanks-small{margin-top:14px !important;font-size:14px;opacity:.55 !important}
 
 /* booking dialog */
 .opener{margin-top:36px}
@@ -462,7 +463,8 @@ footer{margin-top:96px;padding:24px 0 120px;border-top:1.5px solid var(--rule);d
   <div class="thanks" id="thanks" role="status" tabindex="-1">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <h3>Ευχαριστούμε! Η δήλωσή σου καταχωρήθηκε.</h3>
-    <p>Μέσα σε 24 ώρες θα λάβεις email με τα στοιχεία πληρωμής. Η θέση σου κρατιέται για 48 ώρες από τη στιγμή που θα το λάβεις.</p>
+    <p>Σου στείλαμε ήδη email επιβεβαίωσης, και μέσα σε 24 ώρες θα λάβεις τα στοιχεία πληρωμής. Η θέση σου κρατιέται για 48 ώρες από τη στιγμή που θα τα λάβεις.</p>
+    <p class="thanks-small">Δεν βλέπεις το email μας; Έλεγξε τον φάκελο «Ανεπιθύμητα» (Spam) και σημείωσέ το ως «Δεν είναι ανεπιθύμητο», ώστε να λαμβάνεις κανονικά τα επόμενα.</p>
   </div>
   </div>
 </dialog>
@@ -509,7 +511,8 @@ const SEATS_TAKEN = 0; // paid + seats on 48h hold
     btn.querySelector('.t').childNodes[0].textContent = 'Μπες στη λίστα αναμονής ';
     form.querySelector('input[name="_subject"]').value = 'The Founders\u2019 Table \u00b7 Λίστα αναμονής';
     thanks.querySelector('h3').textContent = 'Είσαι στη λίστα αναμονής.';
-    thanks.querySelector('p').textContent = 'Αν ελευθερωθεί θέση, θα σε ειδοποιήσουμε με email.';
+    thanks.querySelector('p').textContent = 'Σου στείλαμε email επιβεβαίωσης. Αν ελευθερωθεί θέση, θα σε ειδοποιήσουμε με email.';
+    thanks.querySelector('.thanks-small').textContent = 'Δεν βλέπεις το email μας; Έλεγξε τον φάκελο «Ανεπιθύμητα» (Spam) και σημείωσέ το ως «Δεν είναι ανεπιθύμητο».';
     var wn = document.createElement('p');
     wn.style.margin = '0 0 22px';
     wn.textContent = 'Οι 8 θέσεις συμπληρώθηκαν. Δήλωσε συμμετοχή στη λίστα αναμονής και θα σε ειδοποιήσουμε με τη σειρά, αν ελευθερωθεί θέση.';
